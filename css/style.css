@@ -1,0 +1,286 @@
+body {
+  font-family: roboto;
+  color: white;
+}
+
+:root {
+  --maim-dark-backgraund-color: #2f303a;
+  --main-blue-color: #2196f3;
+  --main-font-color: #212121;
+  --main-white-color: #fff;
+  --second-white-color-for-background: #f5f4fa;
+  --second-color-for-text: #757575;
+}
+a:hover {
+  color: var(--main-blue-color);
+}
+a:focus {
+  color: var(--main-blue-color);
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+
+/* Хэдер */
+
+.header {
+  position: absolute;
+  width: 1600px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--main-white-color);
+}
+
+/* Навигация по сайту */
+
+.logo-header {
+  position: absolute;
+  width: 145px;
+  height: 31px;
+  left: 215px;
+  top: 24px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+}
+.logo-text-web {
+  color: var(--main-blue-color);
+}
+.logo-text-studio {
+  color: var(--main-font-color);
+}
+.list-of-nav {
+  position: absolute;
+
+  width: 294px;
+  height: 16px;
+  left: 453px;
+  top: 32px;
+}
+.nav-members {
+  display: inline;
+}
+
+.tel-header {
+  position: absolute;
+  width: 122px;
+  height: 16px;
+  left: 1263px;
+  top: 32px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.02em;
+}
+.mail-header {
+  position: absolute;
+  width: 135px;
+  height: 16px;
+  left: 1078px;
+  top: 32px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.02em;
+}
+
+/*Основная часть*/
+
+/* Секция с кнопкой заказа */
+
+.section-with-order {
+  position: absolute;
+  background-color: var(--maim-dark-backgraund-color);
+  width: 1600px;
+  height: 600px;
+  left: 0px;
+  top: 80px;
+}
+.effective-desidion {
+  color: var(--main-white-color);
+  position: absolute;
+  width: 696px;
+  height: 120px;
+  left: 452px;
+  top: 280px;
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 136%;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.order-option-button {
+  background-color: var(--main-blue-color);
+  color: var(--main-white-color);
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 114%;
+  /* identical to box height, or 187% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/*Секция наших преимуществ*/
+
+.our-advantage {
+  position: absolute;
+  width: 1170px;
+  height: 101px;
+  left: 215px;
+  top: 774px;
+}
+.our-advantage-members {
+  display: inline-block;
+  width: 270px;
+  height: 101px;
+  left: 215px;
+  top: 774px;
+}
+.our-advantage-titels {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.our-advantage-main-text {
+  color: var(--second-color-for-text);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+
+  letter-spacing: 0.03em;
+}
+
+/*Секция чем мы занимаемся*/
+
+.what-we-are-doing-section {
+  position: absolute;
+  width: 1170px;
+  height: 386px;
+  left: 215px;
+  top: 969px;
+}
+.what-we-are-doing-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 117%;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.what-we-are-doing-img {
+  display: inline-block;
+  width: 370px;
+  height: 294px;
+  left: 215px;
+  top: 1061px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*Секция нашей команды*/
+
+.our-team-section {
+  background-color: var(--second-white-color-for-background);
+  position: absolute;
+  width: 1600px;
+  height: 648px;
+  left: 0px;
+  top: 1449px;
+}
+.our-team-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 117%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-font-color);
+}
+.members-of-the-team {
+  display: inline-block;
+  background-color: var(--main-white-color);
+}
+.members-name {
+  width: 151px;
+  height: 19px;
+  left: 275px;
+  top: 1925px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.member-of-the-team-proffesion {
+  color: var(--second-color-for-text);
+}
+
+/* Футер */
+
+footer {
+  background-color: var(--maim-dark-backgraund-color);
+  position: absolute;
+  width: 1600px;
+  height: 252px;
+  left: 0px;
+  top: 2097px;
+}
+.logo-webstudio-footer {
+  width: 145px;
+  height: 31px;
+  left: 215px;
+  top: 2157px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+}
+.logo-text-studio-footer {
+  color: var(--main-white-color);
+}
