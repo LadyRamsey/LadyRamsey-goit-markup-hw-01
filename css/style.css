@@ -63,6 +63,7 @@ button {
   color: var(--main-font-color);
 }
 .list-of-nav {
+  color: var(--main-font-color);
   position: absolute;
 
   width: 294px;
@@ -70,11 +71,13 @@ button {
   left: 453px;
   top: 32px;
 }
+
 .nav-members {
   display: inline;
 }
 
 .tel-header {
+  color: var(--second-color-for-text);
   position: absolute;
   width: 122px;
   height: 16px;
@@ -88,6 +91,7 @@ button {
   letter-spacing: 0.02em;
 }
 .mail-header {
+  color: var(--second-color-for-text);
   position: absolute;
   width: 135px;
   height: 16px;
