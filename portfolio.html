@@ -5,87 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфолио</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
   </head>
   <body>
 <header>
     <!-- Навигация по сайту -->
     <nav>
-        <a class="logo-webstudio" href="index.html"><samp class="logo-text-web">Web</samp><samp
-                class="logo-text-studio">Studio</samp></a>
+        <p class="logo-header"><a class="link" href="index.html"><samp class="logo-text-web">Web</samp><samp
+                    class="logo-text-studio">Studio</samp></a></p>
         <ul class="list-of-nav">
             <li class="nav-members">
-                <a href="index.html">Студия</a>
+                <a class="link" href="index.html">Студия</a>
             </li>
             <li class="nav-members">
-                <a href="portfolio.html">Портфолио</a>
+                <a class="link" href="portfolio.html">Портфолио</a>
             </li>
             <li class="nav-members">
-                <a href="">Контакты</a>
+                <a class="link" href="">Контакты</a>
             </li>
         </ul>
     </nav>
     <address>
-        <a href="mailto:info@devstudio.com"><span class="mail-header">info@devstudio.com</span></a>
-        <a href="tel:+380961111111"><span class="tel-header"> +38 096 111 11 11</span></a>
+        <a class="link" href="mailto:info@devstudio.com"><span class="mail-header">info@devstudio.com</span></a>
+        <a class="link" href="tel:+380961111111"><span class="tel-header"> +38 096 111 11 11</span></a>
     </address>
 </header>
+<!-- Основная часть -->
     <main>
-      <section>
-        <div>
-          <ul>
-            <li><button type="button">Все</button></li>
-            <li><button type="button">Веб-сайты</button></li>
-            <li><button type="button">Приложения</button></li>
-            <li><button type="button">Дизайн</button></li>
-            <li><button type="button">Маркетинг</button></li>
+        <!-- Секция с нашими работами -->
+      <section class="section-with-filters">
+          <h1 class="titel-our-works">Our-works</h1>
+        <div class="blok-with-our-works">
+          <ul class="our-work-examples-list-of-filters">
+            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Все</button></li>
+            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Веб-сайты</button></li>
+            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Приложения</button></li>
+            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Дизайн</button></li>
+            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Маркетинг</button></li>
           </ul>
         </div>
-        <ul>
-            <li>
+        <ul class="list-of-works">
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img1.jpg" width="370" height="294" alt="Технокряк">
-                <p>Технокряк</p>
-                <p>Веб-сайт</p>
+                <p class="name-of-work-from-the-list">Технокряк</p>
+                <p class="type-of-work-from-the-list">Веб-сайт</p>
             </li>
-            <li>
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img2.jpg" width="370" height="294" alt="Постер New Orlean vs Golden Star">
-                <p>Постер New Orlean vs Golden Star</p>
-                <p>Дизайн</p>
+                <p class="name-of-work-from-the-list">Постер New Orlean vs Golden Star</p>
+                <p class="type-of-work-from-the-list">Дизайн</p>
             </li>
-            <li><img src="./images/portfolio/img3.jpg" width="370" height="294" alt="Ресторан Seafood">
-                <p>Ресторан Seafood</p>
-                <p>Приложение</p>
+            <li class="list-of-works-member">
+                <img src="./images/portfolio/img3.jpg" width="370" height="294" alt="Ресторан Seafood">
+                <p  class="name-of-work-from-the-list">Ресторан Seafood</p>
+                <p class="type-of-work-from-the-list">Приложение</p>
             </li>
-            <li>
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img4.jpg" width="370" height="294" alt="Проект Prime">
-                <p>Проект Prime</p>
-                <p>Маркетинг</p>   
+                <p  class="name-of-work-from-the-list">Проект Prime</p>
+                <p class="type-of-work-from-the-list">Маркетинг</p>   
             </li>
-            <li>
+            <li class="list-of-works-member">
               <img src="./images/portfolio/img5.jpg" width="370" height="294" alt="Проект Boxes">
-                <p>Проект Boxes</p>
-                <p>Приложение</p>  
+                <p  class="name-of-work-from-the-list">Проект Boxes</p>
+                <p class="type-of-work-from-the-list">Приложение</p>  
             </li>
-            <li>
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img6.jpg" width="370" height="294" alt="Inspiration has no Borders">
-                <p>Inspiration has no Borders</p>
-                <p>Веб-сайт</p>   
+                <p  class="name-of-work-from-the-list">Inspiration has no Borders</p>
+                <p class="type-of-work-from-the-list">Веб-сайт</p>   
             </li>
-            <li>
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img7.jpg" width="370" height="294" alt="Издание Limited Edition">
-                <p>Издание Limited Edition</p>
-                <p>Дизайн</p>  
+                <p  class="name-of-work-from-the-list">Издание Limited Edition</p>
+                <p class="type-of-work-from-the-list">Дизайн</p>  
             </li>
-            <li>
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img8.jpg" width="370" height="294" alt="Проект LAB">
-                <p>Проект LAB</p>
-                <p>Маркетинг</p>  
+                <p class="name-of-work-from-the-list">Проект LAB</p>
+                <p class="type-of-work-from-the-list">Маркетинг</p>  
             </li>
-            <li>
+            <li class="list-of-works-member">
                 <img src="./images/portfolio/img9.jpg" width="370" height="294" alt="Growing Business">
-                <p>Growing Business</p>
-                <p>Приложение</p>   
+                <p class="name-of-work-from-the-list">Growing Business</p>
+                <p class="type-of-work-from-the-list">Приложение</p>   
             </li>
         </ul>
+      </section>
     </main>
   <footer>  
       <a class="logo-webstudio-footer" href="index.html"><samp class="logo-text-web">Web</samp><samp class="logo-text-studio-footer">Studio</samp></a>
