@@ -5,104 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфолио</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-<header>
-    <!-- Навигация по сайту -->
-    <nav>
-        <p class="logo-header"><a class="link" href="index.html"><samp class="logo-text-web">Web</samp><samp
-                    class="logo-text-studio">Studio</samp></a></p>
-        <ul class="list-of-nav">
-            <li class="nav-members">
-                <a class="link" href="index.html">Студия</a>
-            </li>
-            <li class="nav-members">
-                <a class="link" href="portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav-members">
-                <a class="link" href="">Контакты</a>
-            </li>
-        </ul>
-    </nav>
-    <address>
-        <a class="link" href="mailto:info@devstudio.com"><span class="mail-header">info@devstudio.com</span></a>
-        <a class="link" href="tel:+380961111111"><span class="tel-header"> +38 096 111 11 11</span></a>
-    </address>
-</header>
-<!-- Основная часть -->
+    <header class="header">
+        <div class="container">
+            <!-- Навигация по сайту -->
+            <nav>
+                <a class="link logo-header" href="index.html"><samp class="logo-text-web">Web</samp><samp
+                        class="logo-text-studio">Studio</samp></a>`111111111111
+                <ul class="list-of-nav">
+                    <li class="nav-members">
+                        <a class="link" href="index.html">Студия</a>
+                    </li>
+                    <li class="nav-members">
+                        <a class="link" href="portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-members">
+                        <a class="link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <address>
+                <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </address>
+        </div>
+    </header>
+    <!-- Главная часть -->
     <main>
-        <!-- Секция с нашими работами -->
-      <section class="section-with-filters">
-          <h1 class="titel-our-works">Our-works</h1>
-        <div class="blok-with-our-works">
-          <ul class="our-work-examples-list-of-filters">
-            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Все</button></li>
-            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Веб-сайты</button></li>
-            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Приложения</button></li>
-            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Дизайн</button></li>
-            <li class="our-work-examples-filter-members"><button class="our-work-examples-button-for-filter" type="button">Маркетинг</button></li>
+      <!-- Секция наши работы -->
+      <section class="our-works-section">
+        <div class="container">
+            <div class="our-works-section-block">
+          <h1>Наши работы</h1>
+            <ul class="our-works-list-of-filter">
+              <li><button type="button">Все</button></li>
+              <li><button type="button">Веб-сайты</button></li>
+              <li><button type="button">Приложения</button></li>
+              <li><button type="button">Дизайн</button></li>
+              <li><button type="button">Маркетинг</button></li>
+            </ul>
+          <ul class="our-works-list-of-examples">
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img1.jpg" width="370" height="294" alt="Технокряк" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Технокряк</p>
+                <p class="our-works-list-of-examples-members-text">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img2.jpg" width="370" height="294" alt="Постер New Orlean vs Golden Star" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Постер New Orlean vs Golden Star</p>
+                <p class="our-works-list-of-examples-members-text">Дизайн</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img3.jpg" width="370" height="294" alt="Ресторан Seafood" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Ресторан Seafood</p>
+                <p class="our-works-list-of-examples-members-text">Приложение</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img4.jpg" width="370" height="294" alt="Проект Prime" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Проект Prime</p>
+                <p class="our-works-list-of-examples-members-text">Маркетинг</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img5.jpg" width="370" height="294" alt="Проект Boxes" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Проект Boxes</p>
+                <p class="our-works-list-of-examples-members-text">Приложение</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img6.jpg" width="370" height="294" alt="Inspiration has no Borders" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Inspiration has no Borders</p>
+                <p class="our-works-list-of-examples-members-text">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img7.jpg" width="370" height="294" alt="Издание Limited Edition" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Издание Limited Edition</p>
+                <p class="our-works-list-of-examples-members-text">Дизайн</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img8.jpg" width="370" height="294" alt="Проект LAB" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Проект LAB</p>
+                <p class="our-works-list-of-examples-members-text">Маркетинг</p>
+              </div>
+            </li>
+            <li class="our-works-list-of-examples-members">
+              <img src="./images/portfolio/img9.jpg" width="370" height="294" alt="Growing Business" />
+              <div class="card-content">
+                <p class="our-works-list-of-examples-members-title">Growing Business</p>
+                <p class="our-works-list-of-examples-members-text">Приложение</p>
+            </li>
           </ul>
         </div>
-        <ul class="list-of-works">
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img1.jpg" width="370" height="294" alt="Технокряк">
-                <p class="name-of-work-from-the-list">Технокряк</p>
-                <p class="type-of-work-from-the-list">Веб-сайт</p>
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img2.jpg" width="370" height="294" alt="Постер New Orlean vs Golden Star">
-                <p class="name-of-work-from-the-list">Постер New Orlean vs Golden Star</p>
-                <p class="type-of-work-from-the-list">Дизайн</p>
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img3.jpg" width="370" height="294" alt="Ресторан Seafood">
-                <p  class="name-of-work-from-the-list">Ресторан Seafood</p>
-                <p class="type-of-work-from-the-list">Приложение</p>
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img4.jpg" width="370" height="294" alt="Проект Prime">
-                <p  class="name-of-work-from-the-list">Проект Prime</p>
-                <p class="type-of-work-from-the-list">Маркетинг</p>   
-            </li>
-            <li class="list-of-works-member">
-              <img src="./images/portfolio/img5.jpg" width="370" height="294" alt="Проект Boxes">
-                <p  class="name-of-work-from-the-list">Проект Boxes</p>
-                <p class="type-of-work-from-the-list">Приложение</p>  
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img6.jpg" width="370" height="294" alt="Inspiration has no Borders">
-                <p  class="name-of-work-from-the-list">Inspiration has no Borders</p>
-                <p class="type-of-work-from-the-list">Веб-сайт</p>   
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img7.jpg" width="370" height="294" alt="Издание Limited Edition">
-                <p  class="name-of-work-from-the-list">Издание Limited Edition</p>
-                <p class="type-of-work-from-the-list">Дизайн</p>  
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img8.jpg" width="370" height="294" alt="Проект LAB">
-                <p class="name-of-work-from-the-list">Проект LAB</p>
-                <p class="type-of-work-from-the-list">Маркетинг</p>  
-            </li>
-            <li class="list-of-works-member">
-                <img src="./images/portfolio/img9.jpg" width="370" height="294" alt="Growing Business">
-                <p class="name-of-work-from-the-list">Growing Business</p>
-                <p class="type-of-work-from-the-list">Приложение</p>   
-            </li>
-        </ul>
+        </div>
       </section>
     </main>
-  <footer>  
-      <a class="logo-webstudio-footer" href="index.html"><samp class="logo-text-web">Web</samp><samp class="logo-text-studio-footer">Studio</samp></a>
-    <address class="footer-section">
-        <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
-        <p class="mail-footer"><a href="mailto:info@devstudio.com">info@devstudio.com</a></p>
-        <p class="tel-footer"><a href="tel:+380961111111">+38 096 111 11 11</a></p>
-    </address></footer>
+    <footer>
+        <div class="container">
+            <div class="footer-block">
+                <p class="logo-webstudio-footer">
+                    <a class="link" href="index.html"><samp class="logo-text-web">Web</samp><samp
+                            class="logo-text-studio-footer">Studio</samp></a>
+                </p>
+                <address class="footer-section">
+                    <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
+                    <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
+                    <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
+                </address>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
