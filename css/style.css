@@ -59,33 +59,30 @@ img {
   padding: var(--inside-padding-for-section) 0px;
 }
 .container {
-  width: 1170px;
+  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-
-  /* height: 2349px; */
 }
 /* Хэдер */
 
 /* Навигация по сайту */
-.header {
+header .container {
   display: flex;
   background-color: var(--main-white-color);
 
   align-items: center;
 
   border-bottom: 1px solid #ececec;
-  padding: var(--header-top-bottom-padding);
+  padding: var(--header-top-bottom-padding) 0px;
 }
-.header nav,
-.header address {
+header nav {
   display: flex;
 }
-.logo-header {
-  display: flex;
 
+.logo-header {
+  color: var(--main-blue-color);
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -93,34 +90,36 @@ img {
 
   letter-spacing: 0.03em;
 }
-.logo-text-web {
-  color: var(--main-blue-color);
-}
 .logo-text-studio {
   color: var(--main-font-color);
 }
 .list-of-nav {
   display: flex;
+  align-items: center;
 }
 .nav-members {
   list-style: none;
   color: var(--main-font-color);
-  margin-left: 50px;
 }
-.nav-members:not(:last-child) {
+.list-of-nav :not(:last-child) {
   margin-right: 50px;
 }
-.header address a {
+header .contacts {
+  display: flex;
   align-items: flex-end;
   color: var(--second-color-for-text);
+  list-style: none;
 
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 114%;
   letter-spacing: 0.02em;
+  margin-left: auto;
 }
-
+header .contacts :not(:last-child) {
+  margin-right: 50px;
+}
 /*Основная часть*/
 
 /* Секция с кнопкой заказа */
@@ -128,6 +127,7 @@ img {
   background-color: var(--maim-dark-backgraund-color);
   padding: 200px 0 210px;
   border: 0px;
+  text-align: center;
 }
 .effective-desidion {
   color: var(--main-white-color);
@@ -171,12 +171,11 @@ img {
 .our-advantage-list {
   display: flex;
   list-style: none;
-  align-items: center;
-  justify-items: center;
+}
+.our-advantage-list :not(:last-child) {
+  margin-right: 30px;
 }
 .our-advantage-members {
-  margin-right: 30px;
-  margin-top: var(--inside-padding-for-section);
   width: 270px;
 }
 .our-advantage-members :last-child {
