@@ -21,9 +21,10 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: roboto;
+  font-family: Roboto;
   color: var(--main-white-color);
 }
+a,
 .link,
 .link:hover,
 .link:focus {
@@ -83,6 +84,7 @@ header nav {
 
 .logo-header {
   color: var(--main-blue-color);
+  text-decoration: none;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -96,6 +98,7 @@ header nav {
 .list-of-nav {
   display: flex;
   align-items: center;
+  justify-items: center;
 }
 .nav-members {
   list-style: none;
@@ -103,6 +106,9 @@ header nav {
 }
 .list-of-nav :not(:last-child) {
   margin-right: 50px;
+}
+.list-of-nav :first-child {
+  margin-left: 90px;
 }
 header .contacts {
   display: flex;
@@ -166,7 +172,7 @@ header .contacts :not(:last-child) {
 
 /*Секция наших преимуществ*/
 .our-advantage {
-  width: 769px;
+  padding-top: var(--header-top-bottom-padding);
 }
 .our-advantage-list {
   display: flex;
@@ -247,6 +253,7 @@ header .contacts :not(:last-child) {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-font-color);
+  margin-bottom: 50px;
 }
 .our-team-list {
   display: flex;
@@ -258,7 +265,7 @@ header .contacts :not(:last-child) {
   width: 270px;
   height: 368px;
   margin-left: 30px;
-  margin-top: 50px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -266,7 +273,7 @@ header .contacts :not(:last-child) {
   margin-left: 0px;
 }
 .members-of-the-team-text-block {
-  padding: 30px 0px;
+  margin: 30px 0px;
 }
 .members-name {
   color: var(--main-font-color);
@@ -293,6 +300,11 @@ footer {
   padding: 60px 0px 60px;
 }
 .logo-webstudio-footer {
+  padding-bottom: 20px;
+}
+.logo-footer {
+  color: var(--main-blue-color);
+  text-decoration: none;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -300,10 +312,11 @@ footer {
   line-height: 119%;
 
   letter-spacing: 0.03em;
-
-  padding-bottom: 20px;
 }
-.footer-section p :not(:last-child) {
+.logo-webstudio-footer .logo-text-studio {
+  color: var(--main-white-color);
+}
+footer .footer-section p :not(:last-child) {
   margin-bottom: 9px;
 }
 .adsress-footer {
@@ -348,7 +361,7 @@ footer {
 .our-works-section-block {
   padding: var(--inside-padding-for-section) 0px;
 }
-.our-works-section h1 {
+.hidden {
   visibility: hidden;
 }
 .our-works-list-of-filter {
@@ -385,15 +398,15 @@ footer {
   list-style: none;
   flex-wrap: wrap;
 
-  margin-right: calc(-1 * var(--our-works-list-of-examples-marging-right));
-  margin-bottom: calc(-1 * var(--our-works-list-of-examples-marging-right));
+  margin-left: calc(-1 * var(--our-works-list-of-examples-marging-right));
+  margin-top: calc(-1 * var(--our-works-list-of-examples-marging-right));
 }
+
 .our-works-list-of-examples-members {
   flex-basis: calc(100% / 3 - 30px);
-  margin-right: var(--our-works-list-of-examples-marging-right);
-  margin-bottom: var(--our-works-list-of-examples-marging-right);
+  margin-left: var(--our-works-list-of-examples-marging-right);
+  margin-top: var(--our-works-list-of-examples-marging-right);
   width: 370px;
-  height: 404px;
 
   background: var(--main-white-color);
   border: 1px solid var(--border-color);
