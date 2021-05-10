@@ -1,149 +1,462 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфолио</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <!-- Навигация по сайту -->
-        <nav>
-          <a class="logo-header" href="index.html">Web<spam class="logo-text-studio">Studio</spam></a>
-          <ul class="list-of-nav">
-            <li class="nav-members">
-              <a class="link" href="index.html">Студия</a>
-            </li>
-            <li class="nav-members">
-              <a class="link" href="portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav-members">
-              <a class="link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts">
-          <li><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-        </ul>
-      </div>
-    </header>
-    <!-- Главная часть -->
-    <main>
-      <!-- Секция наши работы -->
-      <section class="our-works-section">
-        <div class="container">
-          <div class="our-works-section-block">
-            <h1 class="hidden">Портфолио</h1>
-            <ul class="our-works-list-of-filter">
-              <li><button type="button" class="our-works-list-filters-button">Все</button></li>
-              <li><button type="button" class="our-works-list-filters-button">Веб-сайты</button></li>
-              <li><button type="button" class="our-works-list-filters-button">Приложения</button></li>
-              <li><button type="button" class="our-works-list-filters-button">Дизайн</button></li>
-              <li><button type="button" class="our-works-list-filters-button">Маркетинг</button></li>
-            </ul>
-            <ul class="our-works-list-of-examples">
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img1.jpg" width="370" height="294" alt="Технокряк" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Технокряк</p>
-                  <p class="our-works-list-of-examples-members-text">Веб-сайт</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img
-                  src="./images/portfolio/img2.jpg"
-                  width="370"
-                  height="294"
-                  alt="Постер New Orlean vs Golden Star"
-                />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Постер New Orlean vs Golden Star</p>
-                  <p class="our-works-list-of-examples-members-text">Дизайн</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img3.jpg" width="370" height="294" alt="Ресторан Seafood" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Ресторан Seafood</p>
-                  <p class="our-works-list-of-examples-members-text">Приложение</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img4.jpg" width="370" height="294" alt="Проект Prime" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Проект Prime</p>
-                  <p class="our-works-list-of-examples-members-text">Маркетинг</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img5.jpg" width="370" height="294" alt="Проект Boxes" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Проект Boxes</p>
-                  <p class="our-works-list-of-examples-members-text">Приложение</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img6.jpg" width="370" height="294" alt="Inspiration has no Borders" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Inspiration has no Borders</p>
-                  <p class="our-works-list-of-examples-members-text">Веб-сайт</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img7.jpg" width="370" height="294" alt="Издание Limited Edition" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Издание Limited Edition</p>
-                  <p class="our-works-list-of-examples-members-text">Дизайн</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img8.jpg" width="370" height="294" alt="Проект LAB" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Проект LAB</p>
-                  <p class="our-works-list-of-examples-members-text">Маркетинг</p>
-                </div>
-              </li>
-              <li class="our-works-list-of-examples-members">
-                <img src="./images/portfolio/img9.jpg" width="370" height="294" alt="Growing Business" />
-                <div class="card-content">
-                  <p class="our-works-list-of-examples-members-title">Growing Business</p>
-                  <p class="our-works-list-of-examples-members-text">Приложение</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="footer-block">
-          <p class="logo-webstudio-footer">
-            <a class="logo-footer" href="index.html">Web<spam class="logo-text-studio">Studio</spam></a>
-          </p>
-          <address class="footer-section">
-            <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
-            <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
-            <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
-          </address>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+:root {
+  --maim-dark-backgraund-color: #2f303a;
+  --main-blue-color: #2196f3;
+  --main-font-color: #212121;
+  --main-white-color: #fff;
+  --second-white-color-for-background: #f5f4fa;
+  --second-color-for-text: #757575;
+  --border-color: #eeeeee;
+  --background-for-icons: #f5f4fa;
+
+  /* Paadding and marging */
+  --header-top-bottom-padding: 32px;
+  --our-works-list-of-examples-marging-right: 30px;
+  --inside-padding-for-section: 94px;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body * {
+  font-style: inherit;
+  font-family: Roboto;
+}
+
+a,
+.link,
+.link:hover,
+.link:focus {
+  color: var(--main-blue-color);
+  text-decoration: none;
+  color: inherit;
+}
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+}
+.section {
+  padding: var(--inside-padding-for-section) 0px;
+}
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Хэдер */
+
+/* Навигация по сайту */
+header {
+  border-bottom: 1px solid #ececec;
+}
+header .container {
+  display: flex;
+  background-color: var(--main-white-color);
+
+  align-items: center;
+
+  padding: var(--header-top-bottom-padding);
+}
+header nav {
+  display: flex;
+}
+
+.logo-header {
+  color: var(--main-blue-color);
+  text-decoration: none;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+
+  letter-spacing: 0.03em;
+}
+
+.logo-text-studio {
+  color: var(--main-font-color);
+}
+.list-of-nav {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.nav-members {
+  list-style: none;
+  color: var(--main-font-color);
+  margin-left: 90px;
+}
+.list-of-nav :not(:last-child) {
+  margin-right: 50px;
+}
+header .contacts {
+  display: flex;
+  align-items: flex-end;
+  color: var(--second-color-for-text);
+  list-style: none;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.02em;
+  margin-left: auto;
+}
+header .contacts :not(:last-child) {
+  margin-right: 50px;
+}
+/*Основная часть*/
+
+/* Секция с кнопкой заказа */
+.section-with-order {
+  background-color: var(--maim-dark-backgraund-color);
+  background-image: url('../images/background-photo.jpg');
+  max-width: 1600px;
+  height: 480px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border: 0px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 200px 0 210px;
+  text-align: center;
+}
+.button-with-order {
+  padding: 6px 22px;
+}
+.effective-desidion {
+  color: var(--main-white-color);
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 136%;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 30px;
+}
+.button-with-order {
+  background-color: var(--main-blue-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--main-white-color);
+  box-sizing: 200px 50px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 187%;
+
+  border: 0px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/*Секция наших преимуществ*/
+.our-advantage {
+  padding-top: var(--inside-padding-for-section);
+}
+.our-advantage-list {
+  display: flex;
+  list-style: none;
+}
+.our-advantage-list :not(:last-child) {
+  margin-right: 30px;
+}
+.our-advantage-list ::before :first-child {
+  background-image: url('../images/icon1.svg');
+  background-color: var(--background-for-icons);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.our-advantage-members {
+  width: 270px;
+}
+.our-advantage-members :last-child {
+  margin-right: 0px;
+}
+.our-advantage-titels {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.our-advantage-main-text {
+  color: var(--second-color-for-text);
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+
+  letter-spacing: 0.03em;
+}
+
+/*Секция чем мы занимаемся*/
+
+.what-we-are-doing-section {
+  padding: var(--inside-padding-for-section) 0px;
+}
+.what-we-are-doing-title {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 117%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.what-we-are-doing-list {
+  display: flex;
+  list-style: none;
+}
+.what-we-are-doing-img {
+  width: 370px;
+  height: auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  margin-left: 30px;
+}
+.what-we-are-doing-img:first-child {
+  margin-left: 0px;
+}
+
+/*Секция нашей команды*/
+
+.our-team-section {
+  background-color: var(--second-white-color-for-background);
+  border: 0px;
+  padding: var(--inside-padding-for-section) 0px;
+}
+.our-team-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 117%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-font-color);
+  margin-bottom: 50px;
+}
+.our-team-list {
+  display: flex;
+  list-style: none;
+}
+.members-of-the-team {
+  background-color: var(--main-white-color);
+
+  width: 270px;
+  height: 368px;
+  margin-left: 30px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.members-of-the-team:first-child {
+  margin-left: 0px;
+}
+.members-of-the-team-text-block {
+  margin: 30px 0px;
+}
+.members-name {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 10px;
+}
+.member-of-the-team-proffesion {
+  color: var(--second-color-for-text);
+  text-align: center;
+}
+
+/* Футер */
+
+footer {
+  background-color: var(--maim-dark-backgraund-color);
+}
+.footer-block {
+  padding: 60px 0px 60px;
+}
+.logo-webstudio-footer {
+  padding-bottom: 20px;
+}
+.logo-footer {
+  color: var(--main-blue-color);
+  text-decoration: none;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 119%;
+
+  letter-spacing: 0.03em;
+}
+.logo-webstudio-footer .logo-text-studio {
+  color: var(--main-white-color);
+}
+footer .footer-section p :not(:last-child) {
+  margin-bottom: 9px;
+}
+.adsress-footer {
+  font-style: normal;
+  font-weight: normal;
+  color: var(--main-white-color);
+  font-size: 14px;
+  line-height: 171%;
+
+  letter-spacing: 0.03em;
+}
+.mail-footer {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+
+  letter-spacing: 0.03em;
+
+  color: var(--second-color-for-text);
+}
+.tel-footer {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+
+  letter-spacing: 0.03em;
+
+  color: var(--second-color-for-text);
+}
+.logo-text-studio-footer {
+  color: var(--main-white-color);
+}
+
+/* СТРАНИЦА ПОРТФОЛИО */
+
+.our-works-section {
+  background-color: var(--main-white-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+.our-works-section-block {
+  padding: var(--inside-padding-for-section) 0px;
+}
+.hidden {
+  visibility: hidden;
+}
+.our-works-list-of-filter {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.our-works-list-filters-button {
+  font-family: Roboto;
+  background-color: var(--second-white-color-for-background);
+  border-radius: 4px;
+  border: none;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 162%;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 6px 22px;
+  margin-right: 8px;
+}
+/* .our-works-list-of-filter .our-works-list-filters-button :last-child {
+  margin-right: 0px;
+} */
+
+/* СЕКЦИЯ С РАБОТАМИ */
+
+.our-works-list-of-examples {
+  font-family: Roboto;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * var(--our-works-list-of-examples-marging-right));
+  margin-top: calc(-1 * var(--our-works-list-of-examples-marging-right));
+}
+
+.our-works-list-of-examples-members {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: var(--our-works-list-of-examples-marging-right);
+  margin-top: var(--our-works-list-of-examples-marging-right);
+  width: 370px;
+
+  background: var(--main-white-color);
+  border: 1px solid var(--border-color);
+}
+
+.card-content {
+  padding: 20px 24px;
+}
+.our-works-list-of-examples-members-title {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 200%;
+
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+.our-works-list-of-examples-members-text {
+  color: var(--second-color-for-text);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 187%;
+
+  letter-spacing: 0.03em;
+  margin-top: 4px;
+}
