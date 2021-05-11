@@ -28,12 +28,10 @@ body * {
   font-style: inherit;
   font-family: Roboto, sans-serif;
 }
-a,
 .link,
 .link:hover,
 .link:focus {
   text-decoration: none;
-  /* color: inherit; */
   color: var(--main-blue-color);
 }
 
@@ -108,13 +106,17 @@ header nav {
   align-items: center;
   justify-items: center;
 }
+
 .nav-members {
   list-style: none;
-  color: var(--main-font-color);
+
   margin-left: 90px;
 }
 .list-of-nav :not(:last-child) {
   margin-right: 50px;
+}
+.list-of-nav a {
+  color: var(--main-font-color);
 }
 header .contacts {
   display: flex;
@@ -202,7 +204,12 @@ header .contacts :not(:last-child) {
 .our-advantage-list :not(:last-child) {
   margin-right: 30px;
 }
-
+/* .our-advantage-list ::before :first-child {
+  background-image: url('../images/icon1.svg');
+  background-color: var(--background-for-icons);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 .our-advantage-members {
   width: 270px;
 }
@@ -409,6 +416,9 @@ footer {
   padding: 6px 22px;
   margin-right: 8px;
 }
+/* .our-works-list-of-filter .our-works-list-filters-button :last-child {
+  margin-right: 0px;
+} */
 
 /* СЕКЦИЯ С РАБОТАМИ */
 
