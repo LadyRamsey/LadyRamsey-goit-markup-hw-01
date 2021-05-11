@@ -109,10 +109,9 @@ header nav {
 
 .nav-members {
   list-style: none;
-
   margin-left: 90px;
 }
-.list-of-nav :not(:last-child) {
+.list-of-nav a :not(:last-child) {
   margin-right: 50px;
 }
 .list-of-nav a {
@@ -121,7 +120,6 @@ header nav {
 header .contacts {
   display: flex;
   align-items: flex-end;
-  color: var(--second-color-for-text);
   list-style: none;
 
   font-style: normal;
@@ -133,6 +131,9 @@ header .contacts {
 }
 header .contacts :not(:last-child) {
   margin-right: 50px;
+}
+header .contacts a {
+  color: var(--second-color-for-text);
 }
 /*Основная часть*/
 
@@ -204,6 +205,12 @@ header .contacts :not(:last-child) {
 .our-advantage-list :not(:last-child) {
   margin-right: 30px;
 }
+/* .our-advantage-list ::before :first-child {
+  background-image: url('../images/icon1.svg');
+  background-color: var(--background-for-icons);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 .our-advantage-members {
   width: 270px;
 }
@@ -350,7 +357,7 @@ footer {
 
   letter-spacing: 0.03em;
 }
-.mail-footer {
+.mail-footer a {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -360,7 +367,7 @@ footer {
 
   color: var(--second-color-for-text);
 }
-.tel-footer {
+.tel-footer a {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -387,6 +394,11 @@ footer {
 .hidden {
   visibility: hidden;
 }
+.our-works-list-of-examples-members,
+.our-works-list-of-examples-members:hover,
+.our-works-list-of-examples-members.link:focus {
+  background-color: var(--main-blue-color);
+}
 .our-works-list-of-filter {
   display: flex;
   list-style: none;
@@ -410,6 +422,9 @@ footer {
   padding: 6px 22px;
   margin-right: 8px;
 }
+/* .our-works-list-of-filter .our-works-list-filters-button :last-child {
+  margin-right: 0px;
+} */
 
 /* СЕКЦИЯ С РАБОТАМИ */
 
