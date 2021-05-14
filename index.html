@@ -11,8 +11,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
-    />
-
+    />   
+     
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -41,8 +41,16 @@
           </ul>
         </nav>
         <ul class="contacts">
-          <li><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+          <li><a class="link" href="mailto:info@devstudio.com">
+            <svg class="icon-mail">
+              <use href="./images/symbol-defs.svg#icon-icon-mail"></use>
+            </svg>
+            info@devstudio.com</a></li>
+          <li><a class="link " href="tel:+380961111111">
+            <svg class="icon-phone">
+              <use href="./images/symbol-defs.svg#icon-icon-phone"></use>
+            </svg>
+            +38 096 111 11 11</a></li>
         </ul>
       </div>
     </header>
@@ -66,27 +74,26 @@
 
       <section class="our-advantage">
         <div class="container">
-          <div class="our-advantage-list-block">
             <ul class="our-advantage-list">
-              <li class="our-advantage-members">
+              <li class="our-advantage-members icon-antenna">
                 <h3 class="our-advantage-titels">Внимание к деталям</h3>
                 <p class="our-advantage-main-text">
                   Идейные соображения, а также начало повседневной работы по формированию позиции.
                 </p>
               </li>
-              <li class="our-advantage-members">
+              <li class="our-advantage-members icon-clock">
                 <h3 class="our-advantage-titels">Пунктуальность</h3>
                 <p class="our-advantage-main-text">
                   Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
                 </p>
               </li>
-              <li class="our-advantage-members">
+              <li class="our-advantage-members icon-diagram">
                 <h3 class="our-advantage-titels">Планирование</h3>
                 <p class="our-advantage-main-text">
                   Равным образом консультация с широким активом в значительной степени обуславливает.
                 </p>
               </li>
-              <li class="our-advantage-members">
+              <li class="our-advantage-members icon-astronaut">
                 <h3 class="our-advantage-titels">Современные технологии</h3>
                 <p class="our-advantage-main-text">
                   Значимость этих проблем настолько очевидна, что реализация плановых заданий.
@@ -94,7 +101,6 @@
               </li>
             </ul>
           </div>
-        </div>
       </section>
 
       <!-- Секция чем мы занимаемся -->
@@ -128,6 +134,37 @@
               <div class="members-of-the-team-text-block">
                 <h3 class="members-name">Игорь Демьяненко</h3>
                 <p class="member-of-the-team-proffesion">Product Designer</p>
+                <ul class="contacts">
+                  <li>
+                    <a href="">
+                      <svg class="icon-instagram" width=20px height=20px>
+                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                    <li>
+                      <a href="">
+                        <svg class="icon-twiter" width=20px height=16.25px>
+                          <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                      <li>
+                        <a href="">
+                          <svg class="icon-facebook" width=10px height=20px>
+                            <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                        </li>
+                        <li>
+                          <a href="">
+                            <svg class="icon-linkedin" width=20px height=20px>
+                              <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                            </svg>
+                          </a>
+                        </li>
+                </ul>
               </div>
             </li>
             <li class="members-of-the-team">
@@ -155,6 +192,39 @@
         </div>
       </section>
     </main>
+    <section class="our-clients">
+      <div class="conteiner">
+        <h2>Постоянные клиенты</h2>
+        <ul class="list-of-logos">
+          <li><a href=""><svg class="icon-yaco" width=41px heigh=46.7px>
+            <use href="./images/symbol-defs.svg#icon-icon-yaco"></use>
+          </svg></a>
+        </li>
+          <li>
+            <a href=""><svg class="logo-tagline-here-company" width=40px heigh=46.7px>
+            <use href="./images/symbol-defs.svg#icon-logo-tagline-here-company"></use>
+          </svg></a>
+        </li>
+          <li>
+            <a href=""><svg class="logo-just-company" width=43.46px heigh=52px>
+            <use href="./images/symbol-defs.svg#icon-logo-just-company"></use>
+          </svg></a>
+        </li>
+          <li><a href=""><svg class="logo-foster-peters" width=64.44px heigh=41.18px>
+            <use href="./images/symbol-defs.svg#icon-logo-foster-peters"></use>
+          </svg></a>
+        </li>
+          <li><a href=""><svg class="logo-brand" width=62.65px heigh=45.43px>
+            <use href="./images/symbol-defs.svg#icon-logo-brand"></use>
+          </svg></a>
+        </li>
+          <li><a href=""><svg class="logo-company-tag-line" width=93.79px heigh=43.93px>
+            <use href="./images/symbol-defs.svg#icon-logo-company-tag-line"></use>
+          </svg></a>
+        </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Футер -->
 
@@ -169,6 +239,40 @@
             <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
             <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
           </address>
+        </div>
+        <div class="join-us">
+          <p>ПРИСОЕДИНЯЙТЕСЬ</p>
+          <ul class="contacts">
+            <li>
+              <a href="">
+                <svg class="icon-instagram" width=20px height=20px>
+                  <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon-twiter" width=20px height=16.25px>
+                  <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon-facebook" width=10px height=20px>
+                  <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon-linkedin" width=20px height=20px>
+                  <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
