@@ -120,6 +120,8 @@ header nav {
   color: var(--main-font-color);
 }
 header .contacts {
+  display: flex;
+  align-items: flex-end;
   list-style: none;
 
   font-style: normal;
