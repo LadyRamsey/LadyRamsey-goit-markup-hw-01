@@ -53,6 +53,8 @@ li {
 
 button {
   cursor: pointer;
+  padding: 0;
+  border: none;
 }
 img {
   display: block;
@@ -135,6 +137,23 @@ header .contacts :not(:last-child) {
 header .contacts a {
   color: var(--second-color-for-text);
 }
+header .icon-mail {
+  width: 16px;
+  height: 12px;
+  fill: var(--second-color-for-text);
+  margin-right: 10px;
+}
+header .icon-phone {
+  width: 10px;
+  height: 16px;
+  fill: var(--second-color-for-text);
+  margin-right: 10px;
+}
+
+.icon-mail :hover,
+.icon-phone :hover {
+  fill: var(--main-blue-color);
+}
 /*Основная часть*/
 
 /* Секция с кнопкой заказа */
@@ -158,6 +177,7 @@ header .contacts a {
 .button-with-order {
   padding: 6px 22px;
 }
+
 .effective-desidion {
   color: var(--main-white-color);
 
@@ -202,20 +222,13 @@ header .contacts a {
   display: flex;
   list-style: none;
 }
+
 .our-advantage-list :not(:last-child) {
   margin-right: 30px;
 }
-/* .our-advantage-list ::before :first-child {
-  background-image: url('../images/icon1.svg');
-  background-color: var(--background-for-icons);
-  background-repeat: no-repeat;
-  background-position: center;
-} */
+
 .our-advantage-members {
   width: 270px;
-}
-.our-advantage-members :last-child {
-  margin-right: 0;
 }
 .our-advantage-titels {
   color: var(--main-font-color);
@@ -236,7 +249,37 @@ header .contacts a {
 
   letter-spacing: 0.03em;
 }
+.our-advantage-list li :before {
+  display: flex;
+  content: '';
+  width: 100%;
+  height: 120px;
 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--background-for-icons);
+}
+.icon-antenna ::before {
+  background-image: url(../images/img-antenna.svg);
+  width: 65.32px;
+  height: 70px;
+}
+.icon-clock ::before {
+  background-image: url(../images/img-clock.svg);
+  width: 66.96px;
+  height: 70px;
+}
+.icon-diagram ::before {
+  background-image: url(../images/img-diagram.svg);
+  width: 70px;
+  height: 53.69px;
+}
+.icon-astronaut ::before {
+  background-image: url(../images/img-astronaut.svg);
+  width: 70px;
+  height: 70px;
+}
 /*Секция чем мы занимаемся*/
 
 .what-we-are-doing-section {
@@ -292,7 +335,6 @@ header .contacts a {
   background-color: var(--main-white-color);
 
   width: 270px;
-  height: 368px;
   margin-left: 30px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -318,12 +360,88 @@ header .contacts a {
 .member-of-the-team-proffesion {
   color: var(--second-color-for-text);
   text-align: center;
+  margin-bottom: 16px;
+}
+/* ICONS */
+.our-team-section .contacts {
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+.our-team-list .contacts a {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.our-team-list .contacts :not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-list .icon-instagram,
+.our-team-list .icon-twiter,
+.our-team-list .icon-facebook,
+.our-team-list .icon-linkedin {
+  fill: var(--second-color-for-text);
+}
+.our-team-list .icon-instagram:hover,
+.our-team-list .icon-twiter:hover,
+.our-team-list .icon-facebook:hover,
+.our-team-list .icon-linkedin:hover {
+  fill: var(--main-white-color);
+}
+.our-team-list .contacts :hover {
+  background-color: var(--main-blue-color);
+}
+
+/* Постоянные клиенты */
+
+.our-clients {
+  background-color: var(--main-white-color);
+  border: 0px;
+  padding: var(--inside-padding-for-section) 0px;
+}
+.our-clients h2 {
+  color: var(--main-font-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.list-of-logos {
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+.list-of-logos li {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.list-of-logos :not(:last-child) {
+  margin-right: 30px;
+}
+.list-of-logos svg {
+  fill: var(--second-color-for-text);
+}
+.list-of-logos :hover {
+  fill: var(--main-blue-color);
 }
 
 /* Футер */
 
 footer {
   background-color: var(--maim-dark-backgraund-color);
+}
+footer .container {
+  display: flex;
 }
 .footer-block {
   padding: 60px 0px 60px;
@@ -380,6 +498,41 @@ footer {
 .logo-text-studio-footer {
   color: var(--main-white-color);
 }
+.join-us {
+  margin-left: 70px;
+  padding: 72px 0 0;
+}
+.join-us p {
+  color: var(--main-white-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+footer .contacts {
+  display: flex;
+  list-style: none;
+}
+footer .contacts :not(:last-child) {
+  margin-right: 10px;
+}
+footer .contacts a {
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+footer .contacts a:hover {
+  background: var(--main-blue-color);
+}
+footer .contacts svg {
+  fill: var(--main-white-color);
+}
 
 /* СТРАНИЦА ПОРТФОЛИО */
 
@@ -391,14 +544,18 @@ footer {
 .our-works-section-block {
   padding: var(--inside-padding-for-section) 0px;
 }
-.hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.our-works-list-of-examples-members,
-.our-works-list-of-examples-members:hover,
-.our-works-list-of-examples-members.link:focus {
-  background-color: var(--main-blue-color);
-}
+
 .our-works-list-of-filter {
   display: flex;
   list-style: none;
@@ -408,6 +565,7 @@ footer {
 
 .our-works-list-filters-button {
   font-family: Roboto;
+  color: var(--main-font-color);
   background-color: var(--second-white-color-for-background);
   border-radius: 4px;
   border: none;
@@ -422,10 +580,11 @@ footer {
   padding: 6px 22px;
   margin-right: 8px;
 }
-/* .our-works-list-of-filter .our-works-list-filters-button :last-child {
-  margin-right: 0px;
-} */
-
+.our-works-list-filters-button:hover,
+.our-works-list-filters-button:focus {
+  color: var(--main-white-color);
+  background-color: var(--main-blue-color);
+}
 /* СЕКЦИЯ С РАБОТАМИ */
 
 .our-works-list-of-examples {
