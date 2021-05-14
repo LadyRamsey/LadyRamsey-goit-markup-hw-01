@@ -24,7 +24,7 @@
       <div class="container">
         <!-- Навигация по сайту -->
         <nav>
-          <a class="logo-header" href="index.html">Web<spam class="logo-text-studio">Studio</spam></a>
+          <a class="logo-header" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
           <ul class="list-of-nav">
             <li class="nav-members">
               <a class="link" href="index.html">Студия</a>
@@ -38,8 +38,16 @@
           </ul>
         </nav>
         <ul class="contacts">
-          <li><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+          <li><a class="link" href="mailto:info@devstudio.com">
+              <svg class="icon-mail">
+                <use href="./images/symbol-defs.svg#icon-icon-mail"></use>
+              </svg>
+              info@devstudio.com</a></li>
+          <li><a class="link " href="tel:+380961111111">
+              <svg class="icon-phone">
+                <use href="./images/symbol-defs.svg#icon-icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a></li>
         </ul>
       </div>
     </header>
@@ -49,7 +57,7 @@
       <section class="our-works-section">
         <div class="container">
           <div class="our-works-section-block">
-            <h1 class="hidden">Портфолио</h1>
+            <h1 class="visually-hidden">Портфолио</h1>
             <ul class="our-works-list-of-filter">
               <li><button type="button" class="our-works-list-filters-button">Все</button></li>
               <li><button type="button" class="our-works-list-filters-button">Веб-сайты</button></li>
@@ -131,19 +139,53 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container">
-        <div class="footer-block">
-          <p class="logo-webstudio-footer">
-            <a class="logo-footer" href="index.html">Web<spam class="logo-text-studio">Studio</spam></a>
-          </p>
-          <address class="footer-section">
-            <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
-            <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
-            <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
-          </address>
-        </div>
-      </div>
-    </footer>
+<footer>
+  <div class="container">
+    <div class="footer-block">
+      <p class="logo-webstudio-footer">
+        <a class="logo-footer" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
+      </p>
+      <address class="footer-section">
+        <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
+        <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
+        <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
+      </address>
+    </div>
+    <div class="join-us">
+      <p>ПРИСОЕДИНЯЙТЕСЬ</p>
+      <ul class="contacts">
+        <li>
+          <a href="">
+            <svg class="icon-instagram" width=20px height=20px>
+              <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="icon-twiter" width=20px height=16.25px>
+              <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="icon-facebook" width=10px height=20px>
+              <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        </li>
+        <li>
+          <a href="">
+            <svg class="icon-linkedin" width=20px height=20px>
+              <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
   </body>
 </html>
