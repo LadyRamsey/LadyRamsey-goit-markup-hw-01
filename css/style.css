@@ -369,7 +369,7 @@ header .icon-phone {
 .team__icon {
   fill: var(--second-color-for-text);
 }
-.team__link :hover .team__icon {
+.team__link:hover .team__icon {
   fill: var(--main-white-color);
   background: var(--main-blue-color);
 }
