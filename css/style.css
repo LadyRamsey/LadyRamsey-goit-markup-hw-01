@@ -352,7 +352,7 @@ header .icon-phone {
   text-align: center;
   justify-content: center;
 }
-.our-team-list .contacts a {
+.team__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,6 +371,8 @@ header .icon-phone {
 }
 .team__link:hover .team__icon {
   fill: var(--main-white-color);
+}
+.team__link:hover {
   background: var(--main-blue-color);
 }
 
