@@ -394,7 +394,8 @@ header .icon-phone {
 .our-team-list .icon-linkedin:hover {
   fill: var(--main-white-color);
 }
-.our-team-list .contacts :hover {
+.our-team-list .contacts li :hover,
+.our-team-list .contacts li :focus {
   background-color: var(--main-blue-color);
 }
 
