@@ -137,23 +137,13 @@ header .contacts :not(:last-child) {
 header .contacts a {
   color: var(--second-color-for-text);
 }
-header .icon-mail {
-  width: 16px;
-  height: 12px;
-  fill: var(--second-color-for-text);
-  margin-right: 10px;
-}
-header .icon-phone {
-  text-align: center;
-  justify-content: center;
-  width: 10px;
-  height: 16px;
-  fill: var(--second-color-for-text);
-  margin-right: 10px;
-}
 
-.icon-mail :hover,
-.icon-phone :hover {
+header .contacts .link:hover header .contacts .icon,
+header .contacts .link:focus header .contacts .icon {
+  fill: var(--main-blue-color);
+}
+header .contacts .link:hover,
+header .contacts .link:focus header {
   fill: var(--main-blue-color);
 }
 /*Основная часть*/
@@ -397,30 +387,35 @@ header .icon-phone {
 .list-of-logos {
   list-style: none;
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
 }
 .list-of-logos a {
-  display: block;
-}
-.list-of-logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
 }
-
 .list-of-logos :not(:last-child) {
   margin-right: 30px;
 }
 .logos-icon {
-  fill: black;
+  fill: var(--second-color-for-text);
 }
-.logos-icon :hover {
+.list-of-logos a:hover .logos-icon,
+.list-of-logos a:focus .logos-icon {
   fill: var(--main-blue-color);
+  border-color: var(--main-blue-color);
 }
-
+.list-of-logos a:hover,
+.list-of-logos a:focus {
+  fill: var(--main-blue-color);
+  border-color: var(--main-blue-color);
+}
 /* Футер */
 
 footer {
@@ -593,8 +588,8 @@ footer .contacts svg {
   background: var(--main-white-color);
   border: 1px solid var(--border-color);
 }
-.our-works-list-of-examples-members :focus,
-.our-works-list-of-examples-members :hover {
+.our-works-list-of-examples-members:focus,
+.our-works-list-of-examples-members:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-content {
