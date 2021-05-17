@@ -30,7 +30,7 @@
           <a class="logo-header" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
           <ul class="list-of-nav">
             <li class="nav-members">
-              <a class="link" href="index.html">Студия</a>
+              <a class="link active-page" href="index.html">Студия</a>
             </li>
             <li class="nav-members">
               <a class="link" href="portfolio.html">Портфолио</a>
@@ -72,7 +72,12 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button-with-order">Заказать услугу</button>
+          <button type="button" class="button-with-order" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="button-close" data-modal-close><img src="./images/button-close.png" alt="" width="11" height="11"></button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -136,13 +141,21 @@
           <h2 class="what-we-are-doing-title">Чем мы занимаемся</h2>
           <ul class="what-we-are-doing-list">
             <li class="what-we-are-doing-img">
+              <div class="more-info">
               <img src="./images/webstudio1.jpg" width="370" alt="" />
+              <div class="more-info-text">Десктопные приложения</div>
+            </div>
             </li>
             <li class="what-we-are-doing-img">
+              <div class="more-info">
               <img src="./images/webstudio2.jpg" width="370" alt="" />
+              <div class="more-info-text">Мобильные приложения</div></div>
             </li>
             <li class="what-we-are-doing-img">
+              <div class="more-info">
               <img src="./images/webstudio3.jpg" width="370" alt="" />
+              <div class="more-info-text">Дизайнерские решения</div>
+            </div>
             </li>
           </ul>
         </div>
@@ -395,5 +408,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
