@@ -154,11 +154,12 @@ header .contacts .link:focus header {
 .list-of-nav li {
   position: relative;
 }
-.active-page::after {
+.current::after {
+  display: block;
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -38px;
 
   width: 100%;
   height: 4px;
