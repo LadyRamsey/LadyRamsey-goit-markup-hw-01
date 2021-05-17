@@ -7,6 +7,8 @@
   --second-color-for-text: #757575;
   --border-color: #eeeeee;
   --background-for-icons: #f5f4fa;
+  --color-for-icons: #afb1b8;
+  --maim-tranzition: 250ms;
 
   /* Paadding and marging */
   --header-top-bottom-padding: 32px;
@@ -33,6 +35,7 @@ body * {
 .link:focus {
   text-decoration: none;
   color: var(--main-blue-color);
+  transition: var(--maim-tranzition);
 }
 
 p,
@@ -135,6 +138,7 @@ header .contacts :not(:last-child) {
   margin-right: 50px;
 }
 header .contacts a {
+  position: relative;
   color: var(--second-color-for-text);
   fill: var(--second-color-for-text);
 }
@@ -146,6 +150,20 @@ header .contacts .link:focus header .contacts .icon {
 header .contacts .link:hover,
 header .contacts .link:focus header {
   fill: var(--main-blue-color);
+}
+.list-of-nav li {
+  position: relative;
+}
+.active-page::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--main-blue-color);
 }
 /*Основная часть*/
 
@@ -205,7 +223,39 @@ header .contacts .link:focus header {
   text-align: center;
   letter-spacing: 0.06em;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  width: 528px;
+  height: 581px;
+
+  background: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  size: 30px;
+  border-radius: 50%;
+  color: var(--main-white-color);
+}
 /*Секция наших преимуществ*/
 .our-advantage {
   padding-top: var(--inside-padding-for-section);
@@ -283,6 +333,29 @@ header .contacts .link:focus header {
 .what-we-are-doing-img:first-child {
   margin-left: 0px;
 }
+.more-info {
+  position: relative;
+}
+.more-info-text {
+  position: absolute;
+  width: 100%;
+  min-height: 70px;
+
+  left: 0;
+  bottom: 0;
+
+  text-align: center;
+  padding: 27px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+  background: rgba(47, 48, 58, 0.8);
+}
 
 /*Секция нашей команды*/
 
@@ -350,7 +423,6 @@ header .contacts .link:focus header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  /* background-color: red; */
 }
 
 .our-team-list .contacts :not(:last-child) {
@@ -358,13 +430,17 @@ header .contacts .link:focus header {
 }
 
 .team__icon {
-  fill: var(--second-color-for-text);
+  fill: var(--color-for-icons);
 }
+.team__link:hover .team__icon,
 .team__link:hover .team__icon {
   fill: var(--main-white-color);
+  transition: var(--maim-tranzition);
 }
-.team__link:hover {
+.team__link:hover,
+.team__link:focus {
   background: var(--main-blue-color);
+  transition: var(--maim-tranzition);
 }
 
 /* Постоянные клиенты */
@@ -405,17 +481,19 @@ header .contacts .link:focus header {
   margin-right: 30px;
 }
 .logos-icon {
-  fill: var(--second-color-for-text);
+  fill: var(--color-for-icons);
 }
 .list-of-logos a:hover .logos-icon,
 .list-of-logos a:focus .logos-icon {
   fill: var(--main-blue-color);
   border-color: var(--main-blue-color);
+  transition: var(--maim-tranzition);
 }
 .list-of-logos a:hover,
 .list-of-logos a:focus {
   fill: var(--main-blue-color);
   border-color: var(--main-blue-color);
+  transition: var(--maim-tranzition);
 }
 /* Футер */
 
@@ -510,8 +588,10 @@ footer .contacts a {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
-footer .contacts a:hover {
+footer .contacts a:hover,
+footer .contacts a:focus {
   background: var(--main-blue-color);
+  transition: var(--maim-tranzition);
 }
 footer .contacts svg {
   fill: var(--main-white-color);
@@ -528,15 +608,7 @@ footer .contacts svg {
   padding: var(--inside-padding-for-section) 0px;
 }
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  display: none;
 }
 
 .our-works-list-of-filter {
@@ -567,6 +639,7 @@ footer .contacts svg {
 .our-works-list-filters-button:focus {
   color: var(--main-white-color);
   background-color: var(--main-blue-color);
+  transition: var(--maim-tranzition);
 }
 /* СЕКЦИЯ С РАБОТАМИ */
 
@@ -591,7 +664,9 @@ footer .contacts svg {
 .our-works-list-of-examples-members:focus,
 .our-works-list-of-examples-members:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: var(--maim-tranzition);
 }
+
 .card-content {
   padding: 20px 24px;
   border-bottom: 1px solid var(--border-color);
@@ -617,4 +692,44 @@ footer .contacts svg {
 
   letter-spacing: 0.03em;
   margin-top: 4px;
+}
+.card-img {
+  display: flex;
+  position: relative;
+}
+.card-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.card-img:hover::before,
+.card-img:focus::before {
+  opacity: 1;
+  transition: var(--maim-tranzition);
+}
+.hidden-text {
+  position: absolute;
+  padding: 63px 24px;
+  top: 0;
+  left: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 156%;
+
+  letter-spacing: 0.03em;
+
+  color: var(--main-white-color);
+  opacity: 0;
+  z-index: 2;
+}
+.card-img:hover .hidden-text,
+.card-img:hover .hidden-text {
+  opacity: 1;
 }
