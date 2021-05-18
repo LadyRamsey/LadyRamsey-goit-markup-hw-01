@@ -4,15 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Студия</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
-
+    <title>Портфолио</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,20 +12,25 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <!-- Хэдер -->
-    <header class="header">
+     <header class="header">
       <div class="container">
         <!-- Навигация по сайту -->
         <nav>
           <a class="logo-header" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
           <ul class="list-of-nav">
             <li class="nav-members">
-              <a class="link current" href="index.html">Студия</a>
+              <a class="link" href="index.html">Студия</a>
             </li>
             <li class="nav-members">
-              <a class="link" href="portfolio.html">Портфолио</a>
+              <a class="link current" href="portfolio.html">Портфолио</a>
             </li>
             <li class="nav-members">
               <a class="link" href="">Контакты</a>
@@ -61,301 +58,148 @@
       </div>
     </header>
 
-    <!-- Основная часть -->
-
+    <!-- Главная часть -->
     <main>
-      <!-- Секция с кнопкой заказа -->
-
-      <section class="section-with-order">
+      <!-- Секция наши работы -->
+      <section class="our-works-section">
         <div class="container">
-          <h1 class="effective-desidion">
-            Эффективные решения <br />
-            для вашего бизнеса
-          </h1>
-          <button type="button" class="button-with-order" data-modal-open>Заказать услугу</button>
-        </div>
-      </section>
-
-      <!-- Секция наших преимуществ -->
-
-      <section class="our-advantage">
-        <div class="container">
-          <ul class="our-advantage-list">
-            <li class="our-advantage-members icon-antenna">
-              <div class="advantage-img">
-                <svg width="65" height="70">
-                  <use href="./images/symbol-defs.svg#icon-img-antenna"></use>
-                </svg>
-              </div>
-              <h3 class="our-advantage-titels">Внимание к деталям</h3>
-              <p class="our-advantage-main-text">
-                Идейные соображения, а также начало повседневной работы по формированию позиции.
-              </p>
-            </li>
-            <li class="our-advantage-members icon-clock">
-              <div class="advantage-img">
-                <svg width="67" height="70">
-                  <use href="./images/symbol-defs.svg#icon-img-clock"></use>
-                </svg>
-              </div>
-              <h3 class="our-advantage-titels">Пунктуальность</h3>
-              <p class="our-advantage-main-text">
-                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
-              </p>
-            </li>
-            <li class="our-advantage-members icon-diagram">
-              <div class="advantage-img">
-                <svg width="70" height="54">
-                  <use href="./images/symbol-defs.svg#icon-img-diagram"></use>
-                </svg>
-              </div>
-              <h3 class="our-advantage-titels">Планирование</h3>
-              <p class="our-advantage-main-text">
-                Равным образом консультация с широким активом в значительной степени обуславливает.
-              </p>
-            </li>
-            <li class="our-advantage-members icon-astronaut">
-              <div class="advantage-img">
-                <svg width="70" height="70">
-                  <use href="./images/symbol-defs.svg#icon-img-astronaut"></use>
-                </svg>
-              </div>
-              <h3 class="our-advantage-titels">Современные технологии</h3>
-              <p class="our-advantage-main-text">
-                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Секция чем мы занимаемся -->
-
-      <section class="what-we-are-doing-section">
-        <div class="container">
-          <h2 class="what-we-are-doing-title">Чем мы занимаемся</h2>
-          <ul class="what-we-are-doing-list">
-            <li class="what-we-are-doing-img">
-              <div class="more-info">
-              <img src="./images/webstudio1.jpg" width="370" alt="" />
-              <div class="more-info-text">Десктопные приложения</div>
-            </div>
-            </li>
-            <li class="what-we-are-doing-img">
-              <div class="more-info">
-              <img src="./images/webstudio2.jpg" width="370" alt="" />
-              <div class="more-info-text">Мобильные приложения</div></div>
-            </li>
-            <li class="what-we-are-doing-img">
-              <div class="more-info">
-              <img src="./images/webstudio3.jpg" width="370" alt="" />
-              <div class="more-info-text">Дизайнерские решения</div>
-            </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Секция нашей команды -->
-
-      <section class="our-team-section">
-        <div class="container">
-          <div class="our-team-section-block"></div>
-          <h2 class="our-team-title">Наша команда</h2>
-          <ul class="our-team-list">
-            <li class="members-of-the-team">
-              <img src="./images/webstudio4.jpg" width="270" alt="Игорь Демьяненко" />
-              <div class="members-of-the-team-text-block">
-                <h3 class="members-name">Игорь Демьяненко</h3>
-                <p class="member-of-the-team-proffesion">Product Designer</p>
-                <ul class="contacts">
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="members-of-the-team">
-              <img src="./images/webstudio5.jpg" width="270" alt="Oльга Репина" />
-              <div class="members-of-the-team-text-block">
-                <h3 class="members-name">Oльга Репина</h3>
-                <p class="member-of-the-team-proffesion">Frontend Developer</p>
-                <ul class="contacts">
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="members-of-the-team">
-              <img src="./images/webstudio6.jpg" width="270" alt="Николай Тарасов" />
-              <div class="members-of-the-team-text-block">
-                <h3 class="members-name">Николай Тарасов</h3>
-                <p class="member-of-the-team-proffesion">Marketing</p>
-                <ul class="contacts">
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="members-of-the-team">
-              <img src="./images/webstudio7.jpg" width="270" alt="Михаил Ермаков" />
-              <div class="members-of-the-team-text-block">
-                <h3 class="members-name">Михаил Ермаков</h3>
-                <p class="member-of-the-team-proffesion">UI Designer</p>
-                <ul class="contacts">
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="team__link">
-                      <svg class="team__icon" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+          <div class="our-works-section-block">
+            <h1 class="visually-hidden">Портфолио</h1>
+            <ul class="our-works-list-of-filter">
+              <li><button type="button" class="our-works-list-filters-button">Все</button></li>
+              <li><button type="button" class="our-works-list-filters-button">Веб-сайты</button></li>
+              <li><button type="button" class="our-works-list-filters-button">Приложения</button></li>
+              <li><button type="button" class="our-works-list-filters-button">Дизайн</button></li>
+              <li><button type="button" class="our-works-list-filters-button">Маркетинг</button></li>
+            </ul>
+            <ul class="our-works-list-of-examples">
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img1.jpg" width="370" height="294" alt="Технокряк" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Технокряк</p>
+                  <p class="our-works-list-of-examples-members-text">Веб-сайт</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img
+                    src="./images/portfolio/img2.jpg"
+                    width="370"
+                    height="294"
+                    alt="Постер New Orlean vs Golden Star"
+                  />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Постер New Orlean vs Golden Star</p>
+                  <p class="our-works-list-of-examples-members-text">Дизайн</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img3.jpg" width="370" height="294" alt="Ресторан Seafood" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Ресторан Seafood</p>
+                  <p class="our-works-list-of-examples-members-text">Приложение</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img4.jpg" width="370" height="294" alt="Проект Prime" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Проект Prime</p>
+                  <p class="our-works-list-of-examples-members-text">Маркетинг</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img5.jpg" width="370" height="294" alt="Проект Boxes" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Проект Boxes</p>
+                  <p class="our-works-list-of-examples-members-text">Приложение</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img6.jpg" width="370" height="294" alt="Inspiration has no Borders" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Inspiration has no Borders</p>
+                  <p class="our-works-list-of-examples-members-text">Веб-сайт</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img7.jpg" width="370" height="294" alt="Издание Limited Edition" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Издание Limited Edition</p>
+                  <p class="our-works-list-of-examples-members-text">Дизайн</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img8.jpg" width="370" height="294" alt="Проект LAB" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Проект LAB</p>
+                  <p class="our-works-list-of-examples-members-text">Маркетинг</p>
+                </div>
+              </li>
+              <li class="our-works-list-of-examples-members">
+                <div class="card-img">
+                  <img src="./images/portfolio/img9.jpg" width="370" height="294" alt="Growing Business" />
+                  <div class="hidden-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                    для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </div>
+                </div>
+                <div class="card-content">
+                  <p class="our-works-list-of-examples-members-title">Growing Business</p>
+                  <p class="our-works-list-of-examples-members-text">Приложение</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
-
-    <section class="our-clients">
-      <div class="container">
-        <h2>Постоянные клиенты</h2>
-        <ul class="list-of-logos">
-          <li>
-            <a href="">
-              <svg class="logos-icon" width="106" height="60">
-                <use href="./images/symbol-defs.svg#icon-icon-yaco"></use></svg></a>
-          </li>
-          <li>
-            <a href=""
-              ><svg class="logos-icon" width="106" height="60">
-                <use href="./images/symbol-defs.svg#icon-logo-tagline-here-company"></use></svg></a>
-          </li>
-          <li>
-            <a href=""
-              ><svg class="logos-icon" width="106" height="60">
-                <use href="./images/symbol-defs.svg#icon-logo-just-company"></use></svg ></a>
-          </li>
-          <li>
-            <a href=""
-              ><svg class="logos-icon" width="106" height="60">
-                <use href="./images/symbol-defs.svg#icon-logo-foster-peters"></use></svg></a>
-          </li>
-          <li>
-            <a href=""
-              ><svg class="logos-icon" width="106" height="60">
-                <use href="./images/symbol-defs.svg#icon-logo-brand"></use></svg></a>
-          </li>
-          <li>
-            <a href=""
-              ><svg class="logos-icon" width="106" height="60">
-                <use href="./images/symbol-defs.svg#icon-logo-company-tag-line"></use></svg></a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Футер -->
-
     <footer>
       <div class="container">
         <div class="footer-block">
@@ -403,11 +247,5 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="button-close" data-modal-close><img src="./images/button-close.png" alt="" width="11"
-            height="11"></button></div>
-    </div>
-    <script src="./js/modal.js"></script>
   </body>
 </html>
