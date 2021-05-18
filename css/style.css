@@ -260,6 +260,10 @@ header .contacts .link:focus header {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden:hover {
+  opacity: 1;
+  pointer-events: none;
+}
 /*Секция наших преимуществ*/
 .our-advantage {
   padding-top: var(--inside-padding-for-section);
