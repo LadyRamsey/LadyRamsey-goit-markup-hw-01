@@ -1,744 +1,413 @@
-:root {
-  --maim-dark-backgraund-color: #2f303a;
-  --main-blue-color: #2196f3;
-  --main-font-color: #212121;
-  --main-white-color: #fff;
-  --second-white-color-for-background: #f5f4fa;
-  --second-color-for-text: #757575;
-  --border-color: #eeeeee;
-  --background-for-icons: #f5f4fa;
-  --color-for-icons: #afb1b8;
-  --main-transition: 250ms;
-  --main-cubic-value: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Paadding and marging */
-  --header-top-bottom-padding: 24px;
-  --our-works-list-of-examples-marging-right: 30px;
-  --inside-padding-for-section: 94px;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body * {
-  font-style: inherit;
-  font-family: Roboto, sans-serif;
-}
-.link,
-.link:hover,
-.link:focus {
-  text-decoration: none;
-  color: var(--main-blue-color);
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-
-p,
-h1,
-h2,
-h3,
-ul,
-li {
-  margin: 0px;
-  padding: 0px;
-}
-
-.list {
-  list-style: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-button {
-  cursor: pointer;
-  padding: 0;
-  border: none;
-}
-img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-}
-.section {
-  padding: var(--inside-padding-for-section) 0px;
-}
-.container {
-  width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-/* Хэдер */
-
-/* Навигация по сайту */
-header {
-  border-bottom: 1px solid #ececec;
-}
-header .container {
-  display: flex;
-  background-color: var(--main-white-color);
-
-  align-items: center;
-
-  padding: var(--header-top-bottom-padding);
-}
-header nav {
-  display: flex;
-}
-
-.logo-header {
-  color: var(--main-blue-color);
-  text-decoration: none;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-
-  letter-spacing: 0.03em;
-}
-
-.logo-text-studio {
-  color: var(--main-font-color);
-}
-.list-of-nav {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
-
-.nav-members {
-  list-style: none;
-  margin-left: 90px;
-}
-.list-of-nav a :not(:last-child) {
-  margin-right: 50px;
-}
-.list-of-nav a {
-  color: var(--main-font-color);
-}
-header .contacts {
-  display: flex;
-  align-items: flex-end;
-  list-style: none;
-
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 114%;
-  letter-spacing: 0.02em;
-  margin-left: auto;
-}
-header .contacts :not(:last-child) {
-  margin-right: 50px;
-}
-header .contacts a {
-  color: var(--second-color-for-text);
-  fill: var(--second-color-for-text);
-}
-
-header .contacts .link:hover header .contacts .icon,
-header .contacts .link:focus header .contacts .icon {
-  fill: var(--main-blue-color);
-}
-header .contacts .link:hover,
-header .contacts .link:focus header {
-  fill: var(--main-blue-color);
-}
-.current {
-  position: relative;
-}
-.current::after {
-  display: block;
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--main-blue-color);
-}
-/*Основная часть*/
-
-/* Секция с кнопкой заказа */
-.section-with-order {
-  background: url('../images/background-photo.jpg') rgba(47, 48, 58, 0.4);
-  max-width: 1600px;
-  height: 480px;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  border: 0px;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 200px 0 210px;
-  text-align: center;
-}
-.button-with-order {
-  padding: 6px 22px;
-}
-
-.effective-desidion {
-  color: var(--main-white-color);
-
-  font-style: normal;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 136%;
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  margin-bottom: 30px;
-}
-.button-with-order {
-  background-color: var(--main-blue-color);
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--main-white-color);
-  box-sizing: border-box;
-
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 187%;
-
-  border: 0px;
-
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 528px;
-  height: 581px;
-
-  background: var(--main-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--main-transition) var(--main-cubic-value);
-}
-.button-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  size: 30px;
-  border-radius: 50%;
-  color: var(--main-white-color);
-}
-
-/*Секция наших преимуществ*/
-.our-advantage {
-  padding-top: var(--inside-padding-for-section);
-}
-.our-advantage-list {
-  display: flex;
-  list-style: none;
-}
-
-.our-advantage-list :not(:last-child) {
-  margin-right: 30px;
-}
-
-.our-advantage-members {
-  width: 270px;
-}
-.our-advantage-titels {
-  color: var(--main-font-color);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 114%;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.our-advantage-main-text {
-  color: var(--second-color-for-text);
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 171%;
-
-  letter-spacing: 0.03em;
-}
-.advantage-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 120px;
-  background-color: var(--background-for-icons);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-.advntage-img svg {
-  fill: var(--second-color-for-text);
-}
-/*Секция чем мы занимаемся*/
-
-.what-we-are-doing-section {
-  padding: var(--inside-padding-for-section) 0px;
-}
-.what-we-are-doing-title {
-  color: var(--main-font-color);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 117%;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-.what-we-are-doing-list {
-  display: flex;
-  list-style: none;
-}
-.what-we-are-doing-img {
-  width: 370px;
-  height: auto;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-  margin-left: 30px;
-}
-.what-we-are-doing-img:first-child {
-  margin-left: 0px;
-}
-.more-info {
-  position: relative;
-}
-.more-info-text {
-  position: absolute;
-  width: 100%;
-  min-height: 70px;
-
-  left: 0;
-  bottom: 0;
-
-  text-align: center;
-  padding: 27px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--main-white-color);
-  background: rgba(47, 48, 58, 0.8);
-}
-
-/*Секция нашей команды*/
-
-.our-team-section {
-  background-color: var(--second-white-color-for-background);
-  border: 0px;
-  padding: var(--inside-padding-for-section) 0px;
-}
-.our-team-title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 117%;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--main-font-color);
-  margin-bottom: 50px;
-}
-.our-team-list {
-  display: flex;
-  list-style: none;
-}
-.members-of-the-team {
-  background-color: var(--main-white-color);
-
-  width: 270px;
-  margin-left: 30px;
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-.members-of-the-team:first-child {
-  margin-left: 0px;
-}
-.members-of-the-team-text-block {
-  margin: 30px 0px;
-}
-.members-name {
-  color: var(--main-font-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 119%;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  padding-bottom: 10px;
-}
-.member-of-the-team-proffesion {
-  color: var(--second-color-for-text);
-  text-align: center;
-  margin-bottom: 16px;
-}
-/* ICONS */
-.our-team-section .contacts {
-  list-style: none;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.team__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-
-.our-team-list .contacts :not(:last-child) {
-  margin-right: 10px;
-}
-
-.team__icon {
-  fill: var(--color-for-icons);
-}
-.team__link:hover .team__icon,
-.team__link:hover .team__icon {
-  fill: var(--main-white-color);
-}
-.team__link:hover,
-.team__link:focus {
-  background: var(--main-blue-color);
-}
-
-/* Постоянные клиенты */
-
-.our-clients {
-  background-color: var(--main-white-color);
-  border: 0px;
-  padding: var(--inside-padding-for-section) 0px;
-  text-align: center;
-}
-
-.our-clients h2 {
-  color: var(--main-font-color);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.list-of-logos {
-  list-style: none;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.list-of-logos a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-.list-of-logos :not(:last-child) {
-  margin-right: 30px;
-}
-.logos-icon {
-  fill: var(--color-for-icons);
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-.list-of-logos a:hover .logos-icon,
-.list-of-logos a:focus .logos-icon {
-  fill: var(--main-blue-color);
-  border-color: var(--main-blue-color);
-}
-.list-of-logos a:hover,
-.list-of-logos a:focus {
-  fill: var(--main-blue-color);
-  border-color: var(--main-blue-color);
-}
-/* Футер */
-
-footer {
-  background-color: var(--maim-dark-backgraund-color);
-}
-footer .container {
-  display: flex;
-}
-.footer-block {
-  padding: 60px 0px 60px;
-}
-.logo-webstudio-footer {
-  padding-bottom: 20px;
-}
-.logo-footer {
-  color: var(--main-blue-color);
-  text-decoration: none;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 119%;
-
-  letter-spacing: 0.03em;
-}
-.logo-webstudio-footer .logo-text-studio {
-  color: var(--main-white-color);
-}
-.footer-section :not(:last-child) {
-  margin-bottom: 9px;
-}
-.adsress-footer {
-  font-style: normal;
-  font-weight: normal;
-  color: var(--main-white-color);
-  font-size: 14px;
-  line-height: 171%;
-
-  letter-spacing: 0.03em;
-}
-.mail-footer a {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 171%;
-
-  letter-spacing: 0.03em;
-
-  color: var(--second-color-for-text);
-}
-.tel-footer a {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 171%;
-
-  letter-spacing: 0.03em;
-
-  color: var(--second-color-for-text);
-}
-.logo-text-studio-footer {
-  color: var(--main-white-color);
-}
-.join-us {
-  margin-left: 70px;
-  padding: 72px 0 0;
-}
-.join-us p {
-  color: var(--main-white-color);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-footer .contacts {
-  display: flex;
-  list-style: none;
-}
-footer .contacts :not(:last-child) {
-  margin-right: 10px;
-}
-footer .contacts a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-footer .contacts a:hover,
-footer .contacts a:focus {
-  background: var(--main-blue-color);
-}
-footer .contacts svg {
-  fill: var(--main-white-color);
-}
-
-/* СТРАНИЦА ПОРТФОЛИО */
-
-.our-works-section {
-  background-color: var(--main-white-color);
-  margin-left: auto;
-  margin-right: auto;
-}
-.our-works-section-block {
-  padding: var(--inside-padding-for-section) 0px;
-}
-.visually-hidden {
-  display: none;
-}
-
-.our-works-list-of-filter {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.our-works-list-filters-button {
-  font-family: Roboto;
-  color: var(--main-font-color);
-  background-color: var(--second-white-color-for-background);
-  border-radius: 4px;
-  border: none;
-
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 162%;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  padding: 6px 22px;
-  margin-right: 8px;
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-.our-works-list-filters-button:hover,
-.our-works-list-filters-button:focus {
-  color: var(--main-white-color);
-  background-color: var(--main-blue-color);
-}
-/* СЕКЦИЯ С РАБОТАМИ */
-
-.our-works-list-of-examples {
-  font-family: Roboto;
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-
-  margin-left: calc(-1 * var(--our-works-list-of-examples-marging-right));
-  margin-top: calc(-1 * var(--our-works-list-of-examples-marging-right));
-}
-
-.our-works-list-of-examples-members {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: var(--our-works-list-of-examples-marging-right);
-  margin-top: var(--our-works-list-of-examples-marging-right);
-  width: 370px;
-
-  background: var(--main-white-color);
-}
-.our-works-list-of-examples-members:focus,
-.our-works-list-of-examples-members:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.card-content {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  border-left: 1px solid var(--border-color);
-}
-.our-works-list-of-examples-members-title {
-  color: var(--main-font-color);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 200%;
-
-  letter-spacing: 0.06em;
-  text-align: left;
-}
-.our-works-list-of-examples-members-text {
-  color: var(--second-color-for-text);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 187%;
-
-  letter-spacing: 0.03em;
-  margin-top: 4px;
-}
-.card-img {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.hidden-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-  transform: translatey(100%);
-  transition: var(--main-transition) var(--main-cubic-value);
-}
-
-.our-works-list-of-examples-members:hover .hidden-text {
-  opacity: 1;
-  transform: translate(0%);
-}
-.hidden-text {
-  position: absolute;
-  padding: 63px 24px;
-  top: 0;
-  left: 0;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 156%;
-
-  letter-spacing: 0.03em;
-
-  color: var(--main-white-color);
-  opacity: 0;
-  z-index: 2;
-}
-.card-img:hover .hidden-text,
-.card-img:hover .hidden-text {
-  opacity: 1;
-}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студия</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Хэдер -->
+    <header class="header">
+      <div class="container">
+        <!-- Навигация по сайту -->
+        <nav>
+          <a class="logo-header" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
+          <ul class="list-of-nav">
+            <li class="nav-members">
+              <a class="link current" href="index.html">Студия</a>
+            </li>
+            <li class="nav-members">
+              <a class="link" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-members">
+              <a class="link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contacts">
+          <li>
+            <a class="link" href="mailto:info@devstudio.com">
+              <svg class="icon" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-icon-mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="link" href="tel:+380961111111">
+              <svg class="icon" width="12" height="16">
+                <use href="./images/symbol-defs.svg#icon-icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Основная часть -->
+
+    <main>
+      <!-- Секция с кнопкой заказа -->
+
+      <section class="section-with-order">
+        <div class="container">
+          <h1 class="effective-desidion">
+            Эффективные решения <br />
+            для вашего бизнеса
+          </h1>
+          <button type="button" class="button-with-order" data-modal-open>Заказать услугу</button>
+        </div>
+      </section>
+
+      <!-- Секция наших преимуществ -->
+
+      <section class="our-advantage">
+        <div class="container">
+          <ul class="our-advantage-list">
+            <li class="our-advantage-members icon-antenna">
+              <div class="advantage-img">
+                <svg width="65" height="70">
+                  <use href="./images/symbol-defs.svg#icon-img-antenna"></use>
+                </svg>
+              </div>
+              <h3 class="our-advantage-titels">Внимание к деталям</h3>
+              <p class="our-advantage-main-text">
+                Идейные соображения, а также начало повседневной работы по формированию позиции.
+              </p>
+            </li>
+            <li class="our-advantage-members icon-clock">
+              <div class="advantage-img">
+                <svg width="67" height="70">
+                  <use href="./images/symbol-defs.svg#icon-img-clock"></use>
+                </svg>
+              </div>
+              <h3 class="our-advantage-titels">Пунктуальность</h3>
+              <p class="our-advantage-main-text">
+                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+              </p>
+            </li>
+            <li class="our-advantage-members icon-diagram">
+              <div class="advantage-img">
+                <svg width="70" height="54">
+                  <use href="./images/symbol-defs.svg#icon-img-diagram"></use>
+                </svg>
+              </div>
+              <h3 class="our-advantage-titels">Планирование</h3>
+              <p class="our-advantage-main-text">
+                Равным образом консультация с широким активом в значительной степени обуславливает.
+              </p>
+            </li>
+            <li class="our-advantage-members icon-astronaut">
+              <div class="advantage-img">
+                <svg width="70" height="70">
+                  <use href="./images/symbol-defs.svg#icon-img-astronaut"></use>
+                </svg>
+              </div>
+              <h3 class="our-advantage-titels">Современные технологии</h3>
+              <p class="our-advantage-main-text">
+                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Секция чем мы занимаемся -->
+
+      <section class="what-we-are-doing-section">
+        <div class="container">
+          <h2 class="what-we-are-doing-title">Чем мы занимаемся</h2>
+          <ul class="what-we-are-doing-list">
+            <li class="what-we-are-doing-img">
+              <div class="more-info">
+              <img src="./images/webstudio1.jpg" width="370" alt="" />
+              <div class="more-info-text">Десктопные приложения</div>
+            </div>
+            </li>
+            <li class="what-we-are-doing-img">
+              <div class="more-info">
+              <img src="./images/webstudio2.jpg" width="370" alt="" />
+              <div class="more-info-text">Мобильные приложения</div></div>
+            </li>
+            <li class="what-we-are-doing-img">
+              <div class="more-info">
+              <img src="./images/webstudio3.jpg" width="370" alt="" />
+              <div class="more-info-text">Дизайнерские решения</div>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Секция нашей команды -->
+
+      <section class="our-team-section">
+        <div class="container">
+          <div class="our-team-section-block"></div>
+          <h2 class="our-team-title">Наша команда</h2>
+          <ul class="our-team-list">
+            <li class="members-of-the-team">
+              <img src="./images/webstudio4.jpg" width="270" alt="Игорь Демьяненко" />
+              <div class="members-of-the-team-text-block">
+                <h3 class="members-name">Игорь Демьяненко</h3>
+                <p class="member-of-the-team-proffesion">Product Designer</p>
+                <ul class="contacts">
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="members-of-the-team">
+              <img src="./images/webstudio5.jpg" width="270" alt="Oльга Репина" />
+              <div class="members-of-the-team-text-block">
+                <h3 class="members-name">Oльга Репина</h3>
+                <p class="member-of-the-team-proffesion">Frontend Developer</p>
+                <ul class="contacts">
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="members-of-the-team">
+              <img src="./images/webstudio6.jpg" width="270" alt="Николай Тарасов" />
+              <div class="members-of-the-team-text-block">
+                <h3 class="members-name">Николай Тарасов</h3>
+                <p class="member-of-the-team-proffesion">Marketing</p>
+                <ul class="contacts">
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="members-of-the-team">
+              <img src="./images/webstudio7.jpg" width="270" alt="Михаил Ермаков" />
+              <div class="members-of-the-team-text-block">
+                <h3 class="members-name">Михаил Ермаков</h3>
+                <p class="member-of-the-team-proffesion">UI Designer</p>
+                <ul class="contacts">
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="team__link">
+                      <svg class="team__icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="our-clients">
+      <div class="container">
+        <h2>Постоянные клиенты</h2>
+        <ul class="list-of-logos">
+          <li>
+            <a href="">
+              <svg class="logos-icon" width="106" height="60">
+                <use href="./images/symbol-defs.svg#icon-icon-yaco"></use></svg></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="logos-icon" width="106" height="60">
+                <use href="./images/symbol-defs.svg#icon-logo-tagline-here-company"></use></svg></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="logos-icon" width="106" height="60">
+                <use href="./images/symbol-defs.svg#icon-logo-just-company"></use></svg ></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="logos-icon" width="106" height="60">
+                <use href="./images/symbol-defs.svg#icon-logo-foster-peters"></use></svg></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="logos-icon" width="106" height="60">
+                <use href="./images/symbol-defs.svg#icon-logo-brand"></use></svg></a>
+          </li>
+          <li>
+            <a href=""
+              ><svg class="logos-icon" width="106" height="60">
+                <use href="./images/symbol-defs.svg#icon-logo-company-tag-line"></use></svg></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Футер -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-block">
+          <p class="logo-webstudio-footer">
+            <a class="logo-footer" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
+          </p>
+          <address class="footer-section">
+            <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
+            <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
+            <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
+          </address>
+        </div>
+        <div class="join-us">
+          <p>ПРИСОЕДИНЯЙТЕСЬ</p>
+          <ul class="contacts">
+            <li>
+              <a href="">
+                <svg class="icon-instagram" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon-twiter" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon-facebook" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg class="icon-linkedin" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close" data-modal-close><svg width="11" height="11">
+          <use href="./images/symbol-defs.svg#icon-icon-close-button"></use> </svg></button></div>
+    </div>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
