@@ -709,7 +709,7 @@ footer .contacts svg {
   opacity: 0;
   transiton-property:backgroung-color;
   transition-duration:250ms;
-  transitiontiming-function:liner;
+  transitiontiming-function:cubic-bezier(.31,.39,.83,.67);
 }
 .card-img:hover::before,
 .card-img:focus::before {
