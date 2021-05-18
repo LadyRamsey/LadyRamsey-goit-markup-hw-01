@@ -707,11 +707,13 @@ footer .contacts svg {
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
+  transiton-property:backgroung-color;
+  transition-duration:250ms;
+  transitiontiming-function:liner;
 }
 .card-img:hover::before,
 .card-img:focus::before {
   opacity: 1;
-  transition: var(--maim-tranzition);
 }
 .hidden-text {
   position: absolute;
