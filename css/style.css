@@ -8,7 +8,8 @@
   --border-color: #eeeeee;
   --background-for-icons: #f5f4fa;
   --color-for-icons: #afb1b8;
-  --maim-tranzition: 250ms;
+  --main-transition: 250ms;
+  --main-cubic-value: cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Paadding and marging */
   --header-top-bottom-padding: 24px;
@@ -35,7 +36,7 @@ body * {
 .link:focus {
   text-decoration: none;
   color: var(--main-blue-color);
-  transition: var(--maim-tranzition);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 
 p,
@@ -74,7 +75,6 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
-
 /* Хэдер */
 
 /* Навигация по сайту */
@@ -138,8 +138,7 @@ header .contacts {
 header .contacts :not(:last-child) {
   margin-right: 50px;
 }
-header .contacts .link {
-  position: relative;
+header .contacts a {
   color: var(--second-color-for-text);
   fill: var(--second-color-for-text);
 }
@@ -152,7 +151,7 @@ header .contacts .link:hover,
 header .contacts .link:focus header {
   fill: var(--main-blue-color);
 }
-.list-of-nav li {
+.current {
   position: relative;
 }
 .current::after {
@@ -225,29 +224,6 @@ header .contacts .link:focus header {
   text-align: center;
   letter-spacing: 0.06em;
 }
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 528px;
-  height: 581px;
-
-  background: var(--main-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.button-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  size: 30px;
-  border-radius: 50%;
-  color: var(--main-white-color);
-}
-/* Backdrop*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -260,10 +236,36 @@ header .contacts .link:focus header {
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden:hover {
-  opacity: 1;
-  pointer-events: none;
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
 }
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--main-transition) var(--main-cubic-value);
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
 /*Секция наших преимуществ*/
 .our-advantage {
   padding-top: var(--inside-padding-for-section);
@@ -431,6 +433,7 @@ header .contacts .link:focus header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 
 .our-team-list .contacts :not(:last-child) {
@@ -443,12 +446,10 @@ header .contacts .link:focus header {
 .team__link:hover .team__icon,
 .team__link:hover .team__icon {
   fill: var(--main-white-color);
-  transition: var(--maim-tranzition);
 }
 .team__link:hover,
 .team__link:focus {
   background: var(--main-blue-color);
-  transition: var(--maim-tranzition);
 }
 
 /* Постоянные клиенты */
@@ -484,24 +485,24 @@ header .contacts .link:focus header {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .list-of-logos :not(:last-child) {
   margin-right: 30px;
 }
 .logos-icon {
   fill: var(--color-for-icons);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .list-of-logos a:hover .logos-icon,
 .list-of-logos a:focus .logos-icon {
   fill: var(--main-blue-color);
   border-color: var(--main-blue-color);
-  transition: var(--maim-tranzition);
 }
 .list-of-logos a:hover,
 .list-of-logos a:focus {
   fill: var(--main-blue-color);
   border-color: var(--main-blue-color);
-  transition: var(--maim-tranzition);
 }
 /* Футер */
 
@@ -595,11 +596,11 @@ footer .contacts a {
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 footer .contacts a:hover,
 footer .contacts a:focus {
   background: var(--main-blue-color);
-  transition: var(--maim-tranzition);
 }
 footer .contacts svg {
   fill: var(--main-white-color);
@@ -642,12 +643,12 @@ footer .contacts svg {
   letter-spacing: 0.03em;
   padding: 6px 22px;
   margin-right: 8px;
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .our-works-list-filters-button:hover,
 .our-works-list-filters-button:focus {
   color: var(--main-white-color);
   background-color: var(--main-blue-color);
-  transition: var(--maim-tranzition);
 }
 /* СЕКЦИЯ С РАБОТАМИ */
 
@@ -672,7 +673,6 @@ footer .contacts svg {
 .our-works-list-of-examples-members:focus,
 .our-works-list-of-examples-members:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: var(--maim-tranzition);
 }
 
 .card-content {
@@ -704,9 +704,10 @@ footer .contacts svg {
 .card-img {
   display: flex;
   position: relative;
+  overflow: hidden;
 }
-.card-img::before {
-  content: '';
+
+.hidden-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -714,13 +715,13 @@ footer .contacts svg {
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
-  transiton-property:backgroung-color;
-  transition-duration:1000ms;
-  transitiontiming-function:cubic-bezier(.31,.39,.83,.67);
+  transform: translatey(100%);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
-.card-img:hover::before,
-.card-img:focus::before {
+
+.our-works-list-of-examples-members:hover .hidden-text {
   opacity: 1;
+  transform: translate(0%);
 }
 .hidden-text {
   position: absolute;
