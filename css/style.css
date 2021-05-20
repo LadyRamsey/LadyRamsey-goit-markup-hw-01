@@ -172,7 +172,6 @@ header .contacts .link:focus header {
 .section-with-order {
   background: url('../images/background-photo.jpg') rgba(47, 48, 58, 0.4);
   max-width: 1600px;
-  height: 480px;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,47 +222,6 @@ header .contacts .link:focus header {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-}
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 528px;
-  height: 581px;
-
-  background: var(--main-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--main-transition) var(--main-cubic-value);
-}
-.button-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  background: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
 }
 
 /*Секция наших преимуществ*/
@@ -571,7 +529,8 @@ footer .container {
   margin-left: 70px;
   padding: 72px 0 0;
 }
-.join-us p {
+
+.join-us-title {
   color: var(--main-white-color);
   font-style: normal;
   font-weight: bold;
@@ -585,10 +544,13 @@ footer .contacts {
   display: flex;
   list-style: none;
 }
+.footer-button-group {
+  display: flex;
+}
 footer .contacts :not(:last-child) {
   margin-right: 10px;
 }
-footer .contacts a {
+footer .contacts .link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -598,12 +560,261 @@ footer .contacts a {
   border-radius: 50%;
   transition: var(--main-transition) var(--main-cubic-value);
 }
-footer .contacts a:hover,
-footer .contacts a:focus {
+footer .contacts .link:hover,
+footer .contacts .link:focus {
   background: var(--main-blue-color);
 }
-footer .contacts svg {
+footer .contacts .icon {
   fill: var(--main-white-color);
+}
+/* ФОРМА ПОДПИСАТЬСЯ */
+.follow-form {
+  display: flex;
+  position: relative;
+  padding-top: 72px;
+  margin-left: 93px;
+}
+.follow-form p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+  margin-bottom: 20px;
+}
+.follow-form input {
+  display: flex;
+  width: 358px;
+  height: 50px;
+  left: 815px;
+  top: 2787px;
+
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.follow-button {
+  display: flex;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 62px;
+  background: var(--main-blue-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 187%;
+  margin-left: 12px;
+  padding-left: 29px;
+  padding-right: 28px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--main-white-color);
+}
+.follow-button::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+
+  display: flex;
+  margin: 16px 15px auto 15px;
+  letter-spacing: 0.03em;
+
+  /* color: rgba(255, 255, 255, 0.6); */
+  color: red;
+}
+.follow-buttom-icon {
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  fill: var(--main-white-color);
+  margin-left: 20px;
+}
+/* BACKDROP */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  padding: 41px 40px 39px 40px;
+
+  background: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--main-transition) var(--main-cubic-value);
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.button-close:hover,
+.button-close:focus {
+  fill: var(--main-blue-color);
+}
+.modal-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-font-color);
+  margin-bottom: 12px;
+}
+.form-field {
+  position: relative;
+}
+.form-lable {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+  color: var(--second-color-for-text);
+  margin-bottom: 4px;
+}
+.form-input {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+}
+.form-field:hover .form-input,
+.form-field:focus .form-input {
+  border: 1px solid var(--main-blue-color);
+  border-radius: 4px;
+  fill: var(--main-blue-color);
+}
+
+.icon-in-input {
+  position: absolute;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+  fill: var(--main-font-color);
+
+  transform: translate(-50%);
+}
+.form-field:hover .icon-in-input,
+.form-field:focus .icon-in-input {
+  fill: var(--main-blue-color);
+}
+textarea {
+  resize: none;
+  width: 448px;
+  height: 120px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.policy {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.checkbox {
+  display: block;
+  position: relative;
+}
+.checdox1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  fill: var(--main-font-color);
+  opacity: 1;
+}
+.checdox-agreded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--main-blue-color);
+  fill: var(--main-white-color);
+  opacity: 0;
+}
+.contract a {
+  text-decoration-line: underline;
+}
+.button-send {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 187%;
+
+  letter-spacing: 0.06em;
+
+  color: var(--main-white-color);
+  background: var(--main-blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* СТРАНИЦА ПОРТФОЛИО */
