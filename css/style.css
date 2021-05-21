@@ -686,6 +686,7 @@ footer .contacts .icon {
 .button-close:hover,
 .button-close:focus {
   fill: var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .modal-title {
   font-style: normal;
@@ -717,11 +718,14 @@ footer .contacts .icon {
   border-radius: 4px;
   margin-bottom: 10px;
   padding-left: 42px;
+  outline: none;
 }
-.form-lable:hover .form-input {
+.form-lable:hover .form-input,
+.form-lable:focus .form-input {
   border: 1px solid var(--main-blue-color);
   border-radius: 4px;
   fill: var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 
 .icon-in-input {
@@ -730,8 +734,10 @@ footer .contacts .icon {
   left: 15px;
   fill: var(--main-font-color);
 }
-.form-lable:hover .icon-in-input {
+.form-lable:hover .icon-in-input,
+.form-lable:focus .icon-in-input {
   fill: var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 
 textarea {
@@ -752,17 +758,22 @@ textarea {
   border-radius: 4px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  outline: none;
 }
+textarea:hover,
 textarea:hover {
   border: 1px solid var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .policy {
+  display: block;
   position: relative;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 171%;
-  padding-left: 36px;
+  padding-left: 41px;
+  margin-bottom: 30px;
 
   letter-spacing: 0.03em;
 
@@ -770,17 +781,16 @@ textarea:hover {
 }
 .checkbox1 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 16px;
   width: 16px;
   height: 15px;
   opacity: 1;
-  /* background-color: var(--main-white-color); */
 }
 .checkbox-checked {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 16px;
   width: 16px;
   height: 15px;
   opacity: 0;
@@ -790,21 +800,22 @@ textarea:hover {
 
 .form-checkbox {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 0;
+  top: 0;
   margin-bottom: 30px;
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; */
+  appearance: none;
 }
 .form-checkbox:checked + .checkbox1 {
   opacity: 0;
 }
-.form-checkbox:checked + .checkbox-checked {
+.form-checkbox:checked ~ .checkbox-checked {
   opacity: 1;
 }
-.contract a {
-  text-decoration-line: underline;
+.contract-link {
+  text-decoration: underline;
+  color: var(--main-blue-color);
 }
 .button-send {
   display: block;
@@ -848,7 +859,6 @@ textarea:hover {
 }
 
 .our-works-list-filters-button {
-  font-family: Roboto;
   color: var(--main-font-color);
   background-color: var(--second-white-color-for-background);
   border-radius: 4px;
