@@ -31,10 +31,11 @@ body * {
   font-style: inherit;
   font-family: Roboto, sans-serif;
 }
-.link,
+.link {
+  text-decoration: none;
+}
 .link:hover,
 .link:focus {
-  text-decoration: none;
   color: var(--main-blue-color);
   transition: var(--main-transition) var(--main-cubic-value);
 }
@@ -89,7 +90,7 @@ header .container {
 
   padding: var(--header-top-bottom-padding);
 }
-header nav {
+header .nav-section {
   display: flex;
 }
 
@@ -117,10 +118,10 @@ header nav {
   list-style: none;
   margin-left: 90px;
 }
-.list-of-nav a :not(:last-child) {
+.list-of-nav .link :not(:last-child) {
   margin-right: 50px;
 }
-.list-of-nav a {
+.list-of-nav .link {
   color: var(--main-font-color);
 }
 header .contacts {
@@ -138,18 +139,21 @@ header .contacts {
 header .contacts :not(:last-child) {
   margin-right: 50px;
 }
-header .contacts a {
+.list-of-nav .link:hover,
+.list-of-nav .link:focus {
+  color: var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
+}
+header .contacts .link {
   color: var(--second-color-for-text);
   fill: var(--second-color-for-text);
 }
 
-header .contacts .link:hover header .contacts .icon,
-header .contacts .link:focus header .contacts .icon {
-  fill: var(--main-blue-color);
-}
 header .contacts .link:hover,
-header .contacts .link:focus header {
+header .contacts .link:focus {
   fill: var(--main-blue-color);
+  color: var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .current {
   position: relative;
@@ -269,7 +273,7 @@ header .contacts .link:focus header {
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.advntage-img svg {
+.advantage-icon {
   fill: var(--second-color-for-text);
 }
 /*Секция чем мы занимаемся*/
@@ -419,7 +423,7 @@ header .contacts .link:focus header {
   text-align: center;
 }
 
-.our-clients h2 {
+.our-clients .our-clients__title {
   color: var(--main-font-color);
   font-style: normal;
   font-weight: bold;
@@ -434,7 +438,7 @@ header .contacts .link:focus header {
   text-align: center;
   justify-content: center;
 }
-.list-of-logos a {
+.list-of-logos .link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,7 +506,7 @@ footer .container {
 
   letter-spacing: 0.03em;
 }
-.mail-footer a {
+.footer-section .link {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -512,15 +516,10 @@ footer .container {
 
   color: var(--second-color-for-text);
 }
-.tel-footer a {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 171%;
-
-  letter-spacing: 0.03em;
-
-  color: var(--second-color-for-text);
+.footer-section .link:hover,
+.footer-section .link:focus {
+  color: var(--main-blue-color);
+  transition: var(--main-transition) var(--main-cubic-value);
 }
 .logo-text-studio-footer {
   color: var(--main-white-color);
@@ -574,7 +573,7 @@ footer .contacts .icon {
   padding-top: 72px;
   margin-left: 93px;
 }
-.follow-form p {
+.follow-form__title {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -596,6 +595,7 @@ footer .contacts .icon {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  color: var(--main-white-color);
 }
 .follow-button {
   display: flex;
@@ -616,18 +616,12 @@ footer .contacts .icon {
   letter-spacing: 0.06em;
   color: var(--main-white-color);
 }
-.follow-button::placeholder {
+.follow-form__input {
+  display: flex;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 125%;
-
-  display: flex;
-  margin: 16px 15px auto 15px;
+  padding-left: 16px;
   letter-spacing: 0.03em;
-
-  /* color: rgba(255, 255, 255, 0.6); */
-  color: red;
 }
 .follow-buttom-icon {
   display: flex;
@@ -717,20 +711,27 @@ footer .contacts .icon {
   box-sizing: border-box;
   border-radius: 4px;
   margin-bottom: 10px;
+  margin-top: 4px;
   padding-left: 42px;
   outline: none;
 }
-.form-lable:hover .form-input,
-.form-lable:focus .form-input {
+.form-lable:hover .form-input {
   border: 1px solid var(--main-blue-color);
   border-radius: 4px;
   fill: var(--main-blue-color);
   transition: var(--main-transition) var(--main-cubic-value);
 }
-
+.form-input:focus {
+  border: 1px solid var(--main-blue-color);
+  border-radius: 4px;
+  transition: var(--main-transition) var(--main-cubic-value);
+}
+.form-input:focus + .icon-in-input {
+  fill: var(--main-blue-color);
+}
 .icon-in-input {
   position: absolute;
-  top: 26px;
+  top: 30px;
   left: 15px;
   fill: var(--main-font-color);
 }
@@ -761,7 +762,7 @@ textarea {
   outline: none;
 }
 textarea:hover,
-textarea:hover {
+textarea:focus {
   border: 1px solid var(--main-blue-color);
   transition: var(--main-transition) var(--main-cubic-value);
 }
