@@ -486,6 +486,9 @@ footer .container {
 .footer__address-block :not(:last-child) {
   margin-bottom: 9px;
 }
+.footer__address-block :first-child {
+  margin-top: 20px;
+}
 .footer__address {
   font-style: normal;
   font-weight: normal;
