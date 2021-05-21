@@ -369,105 +369,53 @@
 
     <!-- Футер -->
 
-    <footer>
-      <div class="container">
-        <div class="footer-block">
-          <p class="logo-webstudio-footer">
-            <a class="logo-footer" href="index.html">Web<span class="logo-text-studio">Studio</span></a>
-          </p>
-          <address class="footer-section">
-            <p class="adsress-footer">г. Киев, пр-т Леси Украинки, 26</p>
-            <p class="mail-footer"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
-            <p class="tel-footer"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></p>
-          </address>
-        </div>
-        <div class="join-us">
-          <p class="join-us-title">ПРИСОЕДИНЯЙТЕСЬ</p>
-          <ul class="contacts">
-            <li>
-              <a class="link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-icon-twiter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="follow-form">
-          <form action="">
-            <p>Подпишитесь на рассылку</p>
-            <div class="footer-button-group">
-            <input type="email" placeholder="E-mail" name="footer-email" id="footer-email" />
-            <button class="follow-button">Подписаться <svg class="follow-buttom-icon" width="18" hight="16">
-                <use href="./images/symbol-defs.svg#icon-icon-send"></use>
-              </svg>
-            </button>
-             
-
-          </div>
-        </form>
-        </div>
-      </div>
-    </footer>
+  
     <div class="backdrop is-hidden" data-modal>
       <div class="form modal">
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-        <div class="form-field">
-          <label class="form-lable" for="name">Имя</label>
-          <input class="form-input" type="text" name="name" id="name" autofocus />
-          <svg class="icon-in-input" width="18" hight="16">
-            <use href="./images/symbol-defs.svg#icon-forma-name"></use>
-          </svg>
-        </div>
-        <div class="form-field">
-          <label class="form-lable" for="tel">Телефон</label>
-          <input class="form-input" type="tel" name="tel" id="tel" />
-          <svg class="icon-in-input" width="18" hight="18">
-            <use href="./images/symbol-defs.svg#icon-forma-phone"></use>
-          </svg>
-        </div>
 
-        <div class="form-field">
-          <label class="form-lable" for="email">Почта</label>
-          <input class="form-input" type="email" name="email" id="email" />
-          <svg class="icon-in-input" width="18" hight="18">
-            <use href="./images/symbol-defs.svg#icon-forma-mail"></use>
-          </svg>
-        </div>
+          <label class="form-lable" for="name">
+            Имя          
+            <input class="form-input" type="text" name="name" id="name"/>
+              <svg class="icon-in-input" width="18" height="16">
+                <use href="./images/symbol-defs.svg#icon-forma-name"></use>
+              </svg>
+            </label>
+
+          <label class="form-lable" for="tel">
+            Телефон            
+            <input class="form-input" type="tel" name="tel" id="tel" />
+              <svg class="icon-in-input" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-forma-phone"></use>
+              </svg>
+          </label>
+          <label class="form-lable" for="email">
+            Почта
+            <input class="form-input" type="email" name="email" id="email" />
+            <svg class="icon-in-input" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-forma-mail"></use>
+            </svg>
+          </label>
+
 
         <div class="taxt-aria">
           <label class="form-lable" for="textarea"> Комментарий</label>
           <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
         </div>
-          <input class="form-checkbox" type="checkbox" name="policy" id="policy" />
-          <label class="policy" for="policy">Соглашаюсь с рассылкой и принимаю <a href="" class="contract link">Условия договора</a></label>
-          <svg class="checkbox1" width="18" hight="18">
-            <use href="./images/symbol-defs.svg#icon-forma-checkbox"></use>
+
+          <label class="policy"> 
+            <input class="form-checkbox" type="checkbox" name="policy"/>          
+
+          <svg class="checkbox-checked" width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-icon-check"></use>
           </svg>
-          <svg class="checkbox-form" width="18" hight="18">
-            <use href="./images/symbol-defs.svg#icon-forma-checkbox1"></use>
+            <svg class="checkbox1" width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-checkbox"></use>
           </svg>
+          Соглашаюсь с рассылкой и принимаю 
+          <a href="" class="contract link">Условия договора</a>
+        </label>
+
         <button class="button-send" type="submit">Отправить</button>
         <button class="button-close" data-modal-close>
           <svg width="11" height="11">
