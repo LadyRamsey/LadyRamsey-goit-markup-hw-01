@@ -697,22 +697,19 @@ footer .contacts .icon {
   color: var(--main-font-color);
   margin-bottom: 12px;
 }
-.form-field {
-  position: relative;
-}
+
 .form-lable {
+  position: relative;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  /* identical to box height */
 
   letter-spacing: 0.01em;
   color: var(--second-color-for-text);
   margin-bottom: 4px;
 }
 .form-input {
-  position: relative;
   height: 40px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -721,8 +718,7 @@ footer .contacts .icon {
   margin-bottom: 10px;
   padding-left: 42px;
 }
-.form-field:hover .form-input,
-.form-field:focus .form-input {
+.form-lable:hover .form-input {
   border: 1px solid var(--main-blue-color);
   border-radius: 4px;
   fill: var(--main-blue-color);
@@ -730,17 +726,14 @@ footer .contacts .icon {
 
 .icon-in-input {
   position: absolute;
-  height: 18px;
-  top: 50%;
-  left: 12px;
+  top: 26px;
+  left: 15px;
   fill: var(--main-font-color);
-
-  transform: translate(-50%);
 }
-.form-field:hover .icon-in-input,
-.form-field:focus .icon-in-input {
+.form-lable:hover .icon-in-input {
   fill: var(--main-blue-color);
 }
+
 textarea {
   resize: none;
   width: 448px;
@@ -760,38 +753,55 @@ textarea {
   padding: 12px 16px;
   margin-bottom: 20px;
 }
+textarea:hover {
+  border: 1px solid var(--main-blue-color);
+}
 .policy {
+  position: relative;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 171%;
+  padding-left: 36px;
 
   letter-spacing: 0.03em;
 
   color: #757575;
 }
-.checkbox {
-  display: block;
-  position: relative;
-}
-.checdox1 {
+.checkbox1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
-  fill: var(--main-font-color);
+  width: 16px;
+  height: 15px;
   opacity: 1;
+  /* background-color: var(--main-white-color); */
 }
-.checdox-agreded {
+.checkbox-checked {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
-  background-color: var(--main-blue-color);
-  fill: var(--main-white-color);
+  width: 16px;
+  height: 15px;
   opacity: 0;
+  background-color: var(--main-blue-color);
+  border-radius: 2px;
+}
+
+.form-checkbox {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  margin-bottom: 30px;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+.form-checkbox:checked + .checkbox1 {
+  opacity: 0;
+}
+.form-checkbox:checked + .checkbox-checked {
+  opacity: 1;
 }
 .contract a {
   text-decoration-line: underline;
@@ -802,7 +812,6 @@ textarea {
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
 
   font-style: normal;
   font-weight: bold;
